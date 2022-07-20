@@ -5,9 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +21,8 @@ public class SetupDriver {
         return driver;
     }
     public WebDriver initChromeDriver(){
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "D:\\0.GIOINN\\AUTO_selenium\\chromedriver.exe");
         return new ChromeDriver();
     }
     public WebDriver initFireFoxDriver(){
@@ -33,7 +32,7 @@ public class SetupDriver {
     @BeforeMethod
     public void setUp(){
         setDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
     @AfterMethod
     public void tearDown(){

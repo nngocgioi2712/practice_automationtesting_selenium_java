@@ -3,26 +3,45 @@ package com.selenium.project.pages.myaccount;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
     private WebDriver driver;
-    private By by_username = By.cssSelector("#username");
-    private By by_password = By.cssSelector("#password");
-    private By by_login = By.xpath("//input[@name = 'login']");
-    private By txt_hello = By.xpath("//div[@class = 'page-content entry-content']//p");
-    public LoginPage(WebDriver driver){
-        this.driver = driver;
+    @FindBy(css = "#username")
+    WebElement in_username;
+    @FindBy(css = "#password")
+    WebElement in_password;
+    @FindBy(xpath = "//input[@name = 'login']")
+    WebElement btn_login;
+    @FindBy(xpath = "//div[@class = 'page-content entry-content']//p")
+    private WebElement txt_hello;
+    @FindBy(xpath = "//strong[text() = \"Error:\"]//parent::li")
+    private WebElement txt_error;
+    @FindBy(xpath = "//strong[text() = \"ERROR\"]//parent::li")
+    private WebElement txt_invalidUsername;
+    public LoginPage(WebDriver _driver){
+        driver = _driver;
+        PageFactory.initElements(_driver, this);
     }
 
     public void login(String username, String password){
-        WebElement in_username = driver.findElement(by_username);
-        WebElement in_password = driver.findElement(by_password);
-        WebElement btn_login = driver.findElement(by_login);
         in_username.sendKeys(username);
         in_password.sendKeys(password);
         btn_login.click();
-
-        System.out.println(driver.findElement(txt_hello).getText());
     }
+    public boolean verifySuccessText(String expectedText){
+        if(txt_hello.getText().equals(expectedText)) return true;
+        else return false;
+    }
+    public boolean verifyErrorText(String expectedText){
+        if(txt_error.getText().equals(expectedText)) return true;
+        else return false;
+    }
+    public boolean verifyInvalidUsernameText(String expectedText){
+        if(txt_invalidUsername.getText().equals(expectedText)) return true;
+        else return false;
+    }
+
 
 }
