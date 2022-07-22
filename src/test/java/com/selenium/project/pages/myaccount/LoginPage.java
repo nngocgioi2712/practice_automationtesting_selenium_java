@@ -1,5 +1,7 @@
 package com.selenium.project.pages.myaccount;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,12 +22,15 @@ public class LoginPage {
     private WebElement txt_error;
     @FindBy(xpath = "//strong[text() = \"ERROR\"]//parent::li")
     private WebElement txt_invalidUsername;
+
+    private static final Logger log = LogManager.getLogger(LoginPage.class.getName());
     public LoginPage(WebDriver _driver){
         driver = _driver;
         PageFactory.initElements(_driver, this);
     }
 
     public void login(String username, String password){
+        log.info("Login with username: " + username + " and password: " + password);
         in_username.sendKeys(username);
         in_password.sendKeys(password);
         btn_login.click();

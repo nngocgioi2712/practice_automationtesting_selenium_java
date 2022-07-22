@@ -1,27 +1,28 @@
 package com.selenium.project.testcases.myaccount;
 
-import com.selenium.project.common.SetupDriver;
 import com.selenium.project.pages.myaccount.LoginPage;
-import com.selenium.project.pages.myaccount.MyAccountPage;
-import org.testng.annotations.BeforeClass;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Set;
-
 public class LoginTest extends BaseTest {
     private LoginPage loginPage;
+    private static final Logger log = LogManager.getLogger(LoginTest.class.getName());
     @BeforeMethod
     public void beforeLoginTest(){
         loginPage = new LoginPage(driver);
     }
     @Test
     public void loginSuccessful(){
+        log.info("***Test login successful***");
         String username = "nng729";
         String password = "Lta@#3499";
         String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
         loginPage.login(username, password);
-        loginPage.verifySuccessText(expectedText);
+        if(loginPage.verifySuccessText(expectedText)){
+            log.info("test pass");
+        }else log.info("test fail");
     }
     @Test(priority = 1)
     public void loginWithIncorrectUsernameAndPassword(){
