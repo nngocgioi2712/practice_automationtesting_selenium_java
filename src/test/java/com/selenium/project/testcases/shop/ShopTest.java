@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 
 public class ShopTest extends SetupDriver {
     private  ShopPage shopPage;
-
-
     @Test
     public void filterByPrice() throws Exception{
         int minPrice = 150;
