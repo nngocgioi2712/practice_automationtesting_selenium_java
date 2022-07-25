@@ -4,6 +4,12 @@
         <classes>
             <class name = "com.selenium.project.testcases.myaccount.LoginTest">
             </class>
+            <class name = "com.selenium.project.testcases.shop.ShopTest">
+                <includes>
+                    <include>sortByLowToHigh</include>
+                    <include>sortByHighToLow</include>
+                </includes>
+            </class>
         </classes>
 
     </test>

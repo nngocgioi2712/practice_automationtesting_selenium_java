@@ -20,7 +20,7 @@ public class LoginPage {
     private WebElement txt_hello;
     @FindBy(xpath = "//strong[text() = \"Error:\"]//parent::li")
     private WebElement txt_error;
-    @FindBy(xpath = "//strong[text() = \"ERROR\"]//parent::li")
+    @FindBy(xpath = "//strong[text() = \"Error\"]//parent::li")
     private WebElement txt_invalidUsername;
 
     private static final Logger log = LogManager.getLogger(LoginPage.class.getName());

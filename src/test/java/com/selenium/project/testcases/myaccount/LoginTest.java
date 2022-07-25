@@ -13,7 +13,7 @@ public class LoginTest extends BaseTest {
     public void beforeLoginTest(){
         loginPage = new LoginPage(driver);
     }
-    @Test
+    @Test(priority = 0)
     public void loginSuccessful(){
         log.info("***Test login successful***");
         String username = "nng729";
@@ -28,7 +28,7 @@ public class LoginTest extends BaseTest {
     public void loginWithIncorrectUsernameAndPassword(){
         String username = "nng729123";
         String password = "1234";
-        String expectedText = "ERROR: Invalid username. Lost your password?";
+        String expectedText = "\"Error: the username "+ username + " is not registered on this site. If you are unsure of your username, try your email address instead.";
         loginPage = new LoginPage(driver);
         loginPage.login(username, password);
         loginPage.verifyInvalidUsernameText(expectedText);
