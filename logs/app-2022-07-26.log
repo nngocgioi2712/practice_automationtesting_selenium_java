@@ -1,0 +1,49 @@
+08:15:15.725 INFO  shop.ShopTest ***Filter by Price Test***
+08:21:21.601 INFO  myaccount.LoginTest ***Test login successful***
+08:21:21.606 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+08:21:24.637 INFO  myaccount.LoginTest test pass
+08:44:21.743 INFO  myaccount.LoginTest ***Test login successful***
+08:44:21.745 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+08:44:23.579 INFO  myaccount.LoginTest test pass
+08:53:35.654 INFO  myaccount.LoginTest ***Test login successful***
+08:53:35.656 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+08:53:38.112 INFO  myaccount.LoginTest test pass
+09:13:50.902 INFO  myaccount.LoginTest ***Test login successful***
+09:13:50.904 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+09:13:52.654 INFO  myaccount.LoginTest test pass
+14:32:06.003 INFO  shop.ShopTest ***Filter by Price Test***
+14:33:19.750 INFO  shop.ShopTest ***Filter by Price Test***
+14:42:19.100 INFO  shop.ShopTest ***Filter by Price Test***
+14:44:16.793 INFO  shop.ShopTest ***Filter by Price Test***
+14:51:31.640 INFO  shop.ShopTest ***Filter by Price Test***
+14:52:46.382 INFO  shop.ShopTest ***Filter by Price Test***
+14:53:27.776 INFO  shop.ShopTest ***Filter by Price Test***
+14:59:07.801 INFO  myaccount.LoginTest ***Test login successful***
+14:59:07.805 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+14:59:09.780 INFO  myaccount.LoginTest test pass
+14:59:21.140 INFO  myaccount.LoginPage Login with username: nng729123 and password: 1234
+14:59:34.967 INFO  myaccount.LoginPage Login with username: nng729 and password: 
+14:59:52.154 INFO  myaccount.LoginPage Login with username:  and password: Lta@#3499
+15:00:05.716 INFO  myaccount.LoginPage Login with username:  and password: 
+15:27:56.910 INFO  myaccount.LoginTest ***Test login successful***
+15:27:56.913 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+15:27:59.506 INFO  myaccount.LoginTest test pass
+15:28:08.036 INFO  myaccount.LoginPage Login with username: nng729123 and password: 1234
+16:37:13.561 INFO  myaccount.LoginTest ***Test login successful***
+16:37:13.564 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+16:37:16.964 INFO  myaccount.LoginTest test pass
+16:38:13.714 INFO  myaccount.LoginTest ***Test login successful***
+16:38:13.716 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+16:38:16.699 INFO  myaccount.LoginTest test pass
+17:34:25.675 INFO  myaccount.LoginTest ***Test login successful***
+17:34:25.689 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+17:34:28.801 INFO  myaccount.LoginTest test pass
+17:44:10.499 INFO  myaccount.LoginTest ***Test login successful***
+17:44:10.501 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+17:44:13.391 INFO  myaccount.LoginTest test pass
+17:45:59.509 INFO  myaccount.LoginTest ***Test login successful***
+17:45:59.511 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+17:46:01.096 INFO  myaccount.LoginTest test pass
+17:46:27.399 INFO  myaccount.LoginTest ***Test login successful***
+17:46:27.401 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+17:46:30.145 INFO  myaccount.LoginTest test pass

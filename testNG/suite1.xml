@@ -1,16 +1,15 @@
+<suite name="Suite 1">
+  <test name="Login test">
+    <classes>
+      <class name="com.selenium.project.testcases.myaccount.LoginTest">
+      </class>
+      <class name="com.selenium.project.testcases.shop.ShopTest">
+        <methods>
+          <include name = "sortByLowToHigh"/>
+          <include name = "sortByHighToLow"/>
+        </methods>
+      </class>
+    </classes>
 
-<suite name = "Suite 1">
-    <test name = "Login test">
-        <classes>
-            <class name = "com.selenium.project.testcases.myaccount.LoginTest">
-            </class>
-            <class name = "com.selenium.project.testcases.shop.ShopTest">
-                <includes>
-                    <include>sortByLowToHigh</include>
-                    <include>sortByHighToLow</include>
-                </includes>
-            </class>
-        </classes>
-
-    </test>
+  </test>
 </suite>
