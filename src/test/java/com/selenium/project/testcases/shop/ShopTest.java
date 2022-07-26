@@ -1,87 +1,82 @@
 package com.selenium.project.testcases.shop;
 
 import com.selenium.project.common.SetupDriver;
-import com.selenium.project.pages.shop.ShopPage;
+import com.selenium.project.pages.MenuBar;
+import com.selenium.project.pages.shop.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ShopTest extends SetupDriver {
-  private ShopPage shopPage;
+  private MenuBar menuBar;
+  private FilterComponent filterComponent;
+  private CategoriesComponent categoriesComponent;
+  private SelectBox selectBox;
+  private PostList postList;
   private static final Logger log = LogManager.getLogger(ShopTest.class.getName());
 
+  @BeforeMethod
+  public void beforeShopTest(){
+    menuBar = new MenuBar(driver);
+  }
   @Test
   public void filterByPrice() throws Exception {
     int minPrice = 150;
     int maxPrice = 451;
     int xOffset = -28;
     log.info("***Filter by Price Test***");
-    shopPage = new ShopPage(driver);
-    Thread.sleep(3000);
-    shopPage.openShopMenu();
-    Thread.sleep(3000);
-    shopPage.filterPrice(xOffset);
-    Assert.assertTrue(shopPage.verifyBookList(minPrice, maxPrice));
+    menuBar.openShopMenu();
+    filterComponent = new FilterComponent(driver);
+    postList = new PostList(driver);
+    filterComponent.filterPrice(xOffset);
+    filterComponent.verifyPriceInFilter(minPrice, maxPrice);
+    Assert.assertTrue(postList.verifyPriceOfProduct(minPrice, maxPrice));
   }
 
   @Test
   public void testProductCategories() throws Exception {
     String menu = "JavaScript";
     String[] expectedResultText = {"JavaScript", "JS"};
-    shopPage = new ShopPage(driver);
-    Thread.sleep(3000);
-    shopPage.openShopMenu();
-    Thread.sleep(3000);
-    shopPage.clickProductCategory(menu);
-    Assert.assertTrue(shopPage.verifyNavigation(menu));
-    Assert.assertTrue(shopPage.verifyProductList(expectedResultText));
+    menuBar.openShopMenu();
+    categoriesComponent = new CategoriesComponent(driver);
+    postList = new PostList(driver);
+    categoriesComponent.clickProductCategories(menu);
+    Assert.assertTrue(postList.verifyNavigation(menu));
+    Assert.assertTrue(postList.verifyNameOfProduct(expectedResultText));
   }
 
   @Test
   public void sortByPopularity() throws Exception {
-    shopPage = new ShopPage(driver);
-    Thread.sleep(3000);
-    shopPage.openShopMenu();
-    Thread.sleep(3000);
   }
 
   @Test
   public void sortByAverageRatings() throws Exception {
-    shopPage = new ShopPage(driver);
-    Thread.sleep(3000);
-    shopPage.openShopMenu();
-    Thread.sleep(3000);
   }
 
   @Test
   public void sortByNewnessRatings() throws Exception {
-    shopPage = new ShopPage(driver);
-    Thread.sleep(3000);
-    shopPage.openShopMenu();
-    Thread.sleep(3000);
   }
 
   @Test
-  public void sortByLowToHigh() throws Exception {
-    shopPage = new ShopPage(driver);
-    Thread.sleep(3000);
-    shopPage.openShopMenu();
-    Thread.sleep(3000);
-    shopPage.clickSortPriceLowToHigh();
-    shopPage.verifySortPriceLowToHigh();
+  public void sortByLowToHigh() {
+    menuBar.openShopMenu();
+    selectBox = new SelectBox(driver);
+    postList = new PostList(driver);
+    selectBox.clickSortPriceLowToHigh();
+    postList.verifySortPriceLowToHigh();
   }
 
   @Test
   public void sortByHighToLow() throws Exception {
-    shopPage = new ShopPage(driver);
-    Thread.sleep(3000);
-    shopPage.openShopMenu();
-    Thread.sleep(3000);
-    shopPage.clickSortPriceHighToLow();
-    shopPage.verifySortPriceHighToLow();
+    menuBar.openShopMenu();
+    selectBox = new SelectBox(driver);
+    postList = new PostList(driver);
+    selectBox.clickSortPriceHighToLow();
+    postList.verifySortPriceHighToLow();
   }
 }

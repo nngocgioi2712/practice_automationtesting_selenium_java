@@ -1,7 +1,7 @@
 package com.selenium.project.pages;
 
 import com.selenium.project.pages.myaccount.LoginPage;
-import com.selenium.project.pages.myaccount.MyAccountPage;
+import com.selenium.project.pages.shop.ShopPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +14,8 @@ public class MenuBar {
 
   @FindBy (partialLinkText = "My Account")
   private WebElement mnu_myAccount;
+  @FindBy(partialLinkText = "Shop")
+  private WebElement mnu_shop;
 
   public MenuBar(WebDriver driver) {
     this.driver = driver;
@@ -27,9 +29,15 @@ public class MenuBar {
 
 
   public LoginPage OpenMyAccountPage() {
-    WebDriverWait wait = new WebDriverWait(driver, 10);
+    WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_myAccount));
     mnu_myAccount.click();
     return new LoginPage(driver);
+  }
+  public ShopPage openShopMenu() {
+    WebDriverWait wait = new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.elementToBeClickable(mnu_shop));
+    mnu_shop.click();
+    return new ShopPage(driver);
   }
 }
