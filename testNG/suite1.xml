@@ -1,10 +1,9 @@
+<suite name="Suite 1">
+  <test name="Login test">
+    <classes>
+      <class name="com.selenium.project.testcases.myaccount.LoginTest">
+      </class>
+    </classes>
 
-<suite name = "Suite 1">
-    <test name = "Login test">
-        <classes>
-            <class name = "com.selenium.project.testcases.myaccount.LoginTest">
-            </class>
-        </classes>
-
-    </test>
+  </test>
 </suite>

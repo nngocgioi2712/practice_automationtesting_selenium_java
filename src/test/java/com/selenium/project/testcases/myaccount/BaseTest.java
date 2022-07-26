@@ -7,11 +7,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends SetupDriver {
-    private MyAccountPage myAccountPage;
-    @BeforeMethod
-    public void beforeBaseTest() throws Exception{
-        myAccountPage = new MyAccountPage(driver);
-        Thread.sleep(3000);
-        myAccountPage.OpenMyAccountPage();
-    }
+  private MyAccountPage myAccountPage;
+
+  @BeforeMethod
+  public void beforeBaseTest() throws Exception {
+    myAccountPage = new MyAccountPage(driver);
+    Thread.sleep(3000);
+    myAccountPage.OpenMyAccountPage();
+  }
 }
