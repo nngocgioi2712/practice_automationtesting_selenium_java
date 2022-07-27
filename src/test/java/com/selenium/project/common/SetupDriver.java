@@ -1,6 +1,8 @@
 package com.selenium.project.common;
 
+import com.selenium.project.helpers.PropertiesHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +15,17 @@ public class SetupDriver {
   protected WebDriver driver;
 
   public void setDriver() {
-    driver = initChromeDriver();
+    switch (PropertiesHelper.getValue("browser").toLowerCase(Locale.ROOT)) {
+      case "chrome":
+        driver = initChromeDriver();
+        break;
+      case "firefox":
+        driver = initFireFoxDriver();
+        break;
+      default:
+        System.out.println("Browse " + PropertiesHelper.getValue("browser") + "is invalid. Launching Chrome ...");
+        driver = initChromeDriver();
+    }
     driver.manage().window().maximize();
     driver.get("http://practice.automationtesting.in/");
   }
@@ -23,8 +35,8 @@ public class SetupDriver {
   }
 
   public WebDriver initChromeDriver() {
-    WebDriverManager.chromedriver().setup();
-    //System.setProperty("webdriver.chrome.driver", "D:\\0.GIOINN\\AUTO_selenium\\chromedriver.exe");
+    //WebDriverManager.chromedriver().setup();
+    System.setProperty("webdriver.chrome.driver", "D:\\0.GIOINN\\AUTO_selenium\\chromedriver.exe");
     return new ChromeDriver();
   }
 

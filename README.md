@@ -1,1 +1,1 @@
-# _javapractice_automationtesting_selenium
+# practice_automationtesting_selenium_java

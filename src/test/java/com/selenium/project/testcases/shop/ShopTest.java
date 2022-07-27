@@ -2,14 +2,14 @@ package com.selenium.project.testcases.shop;
 
 import com.selenium.project.common.SetupDriver;
 import com.selenium.project.pages.MenuBar;
-import com.selenium.project.pages.shop.*;
+import com.selenium.project.pages.shop.CategoriesComponent;
+import com.selenium.project.pages.shop.FilterComponent;
+import com.selenium.project.pages.shop.PostList;
+import com.selenium.project.pages.shop.SelectBox;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ShopTest extends SetupDriver {
