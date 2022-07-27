@@ -4,8 +4,6 @@ import com.selenium.project.common.Helper;
 import com.selenium.project.common.SetupDriver;
 import com.selenium.project.pages.MenuBar;
 import com.selenium.project.pages.myaccount.LoginPage;
-import com.selenium.project.pages.myaccount.MyAccountPage;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends SetupDriver {
@@ -19,7 +17,7 @@ public class BaseTest extends SetupDriver {
     menuBar = new MenuBar(driver);
 
     //Thread.sleep(3000);
-    helper.waitForPageLoaded();
+    //helper.waitForPageLoaded();
     loginPage = menuBar.OpenMyAccountPage();
   }
 }
