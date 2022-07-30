@@ -1,5 +1,6 @@
 package com.selenium.project.testcases.myaccount;
 
+import com.selenium.project.helpers.PropertiesHelper;
 import com.selenium.project.pages.myaccount.LoginPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,8 +14,8 @@ public class LoginTest extends BaseTest {
   @Test(priority = 0)
   public void loginSuccessful() {
     log.info("***Test login successful***");
-    String username = "nng729";
-    String password = "Lta@#3499";
+    String username = PropertiesHelper.getValue("username");
+    String password = PropertiesHelper.getValue("password");
     String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
     loginPage.login(username, password);
     if (loginPage.verifySuccessText(expectedText)) {
