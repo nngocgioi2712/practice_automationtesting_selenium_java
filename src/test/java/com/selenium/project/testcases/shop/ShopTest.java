@@ -72,7 +72,7 @@ public class ShopTest extends SetupDriver {
   }
 
   @Test
-  public void sortByHighToLow() throws Exception {
+  public void sortByHighToLow() {
     menuBar.openShopMenu();
     selectBox = new SelectBox(driver);
     postList = new PostList(driver);

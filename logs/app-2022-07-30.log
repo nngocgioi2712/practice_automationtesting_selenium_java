@@ -1,0 +1,7 @@
+19:58:11.007 INFO  myaccount.LoginTest ***Test login successful***
+19:58:11.020 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+19:58:14.083 INFO  myaccount.LoginTest test pass
+19:58:32.910 INFO  myaccount.LoginPage Login with username: nng729123 and password: 1234
+19:58:46.236 INFO  myaccount.LoginPage Login with username: nng729 and password: 
+19:59:17.751 INFO  myaccount.LoginPage Login with username:  and password: Lta@#3499
+19:59:43.052 INFO  myaccount.LoginPage Login with username:  and password: 
