@@ -1,5 +1,6 @@
 package com.selenium.project.pages.shop;
 
+import com.selenium.project.utils.WebUI;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,8 +20,8 @@ public class CategoriesComponent {
     public void clickProductCategories(String menu) {
         boolean check_menu = false;
         for (int i = 0; i < categories.size(); i++) {
-            if (categories.get(i).getText().equals(menu)) {
-                categories.get(i).click();
+            if (WebUI.getText(categories.get(i)).equals(menu)) {
+                WebUI.clickElement(categories.get(i));
                 check_menu = true;
                 break;
             }

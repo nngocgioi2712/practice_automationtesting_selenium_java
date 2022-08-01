@@ -64,4 +64,9 @@ public class LoginPage {
     if (txt_invalidUsername.getText().equals(expectedText)) return true;
     else return false;
   }
+  public boolean verifyPasswordMasked(){
+    if(in_password.getText().contains("*")){
+      return true;
+    } else return false;
+  }
 }
