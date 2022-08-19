@@ -18,6 +18,8 @@
           <include name="testProductCategories"/>
           <include name = "sortByLowToHigh"/>
           <include name = "sortByHighToLow"/>
+          <include name = "sortByLowToHigh"/>
+          <include name = "sortByHighToLow"/>
         </methods>
       </class>
     </classes>

@@ -1,0 +1,19 @@
+14:43:15.329 INFO  myaccount.LoginTest ***Test login successful***
+14:43:15.333 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+14:52:02.110 INFO  testng.ITestResult org.testng.ITestResult
+14:52:02.113 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+14:57:41.164 INFO  testng.ITestResult org.testng.ITestResult
+14:57:41.166 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+14:58:24.169 INFO  testng.ITestResult org.testng.ITestResult
+14:58:24.171 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+14:58:29.078 INFO  testng.ITestResult Testcase passed: org.testng.ITestResult
+15:05:27.681 INFO  testng.ITestResult loginSuccessful
+15:05:27.684 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+15:05:29.858 INFO  testng.ITestResult Testcase passed: [TestResult name=loginSuccessful status=SUCCESS method=LoginTest.loginSuccessful()[pri:0, instance:com.selenium.project.testcases.myaccount.LoginTest@72d818d1] output={null}]
+15:11:43.029 INFO  testng.ITestContext loginSuccessful
+15:11:43.031 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+15:11:45.957 INFO  testng.ITestContext Testcase passed: [TestResult name=loginSuccessful status=SUCCESS method=LoginTest.loginSuccessful()[pri:0, instance:com.selenium.project.testcases.myaccount.LoginTest@72d818d1] output={null}]
+15:12:58.302 INFO  listeners.ListenerTest loginSuccessful
+15:12:58.306 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+15:13:01.150 INFO  listeners.ListenerTest Testcase passed: [TestResult name=loginSuccessful status=SUCCESS method=LoginTest.loginSuccessful()[pri:0, instance:com.selenium.project.testcases.myaccount.LoginTest@72d818d1] output={null}]
+15:31:02.159 INFO  logs.Log loginSuccessful

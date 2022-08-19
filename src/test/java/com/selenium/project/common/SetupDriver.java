@@ -6,13 +6,12 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class SetupDriver {
-  protected WebDriver driver;
+  protected static WebDriver driver;
 
   public void setDriver() {
     switch (PropertiesHelper.getValue("browser").toLowerCase(Locale.ROOT)) {
@@ -30,13 +29,13 @@ public class SetupDriver {
     driver.get("http://practice.automationtesting.in/");
   }
 
-  public WebDriver getDriver() {
+  public static WebDriver getDriver() {
     return driver;
   }
 
   public WebDriver initChromeDriver() {
-    WebDriverManager.chromedriver().setup();
-    //System.setProperty("webdriver.chrome.driver", "D:\\0.GIOINN\\AUTO_selenium\\chromedriver.exe");
+    //WebDriverManager.chromedriver().setup();
+    System.setProperty("webdriver.chrome.driver", "D:\\0.GIOINN\\AUTO_selenium\\chromedriver.exe");
     return new ChromeDriver();
   }
 
