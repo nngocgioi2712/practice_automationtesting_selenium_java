@@ -1,5 +1,6 @@
 package com.selenium.project.pages.myaccount;
 
+import com.selenium.project.utils.Log;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -29,8 +30,6 @@ public class LoginPage {
   @FindBy(xpath = "//strong[text() = \"Error\"]//parent::li")
   private WebElement txt_invalidUsername;
 
-  private static final Logger log = LogManager.getLogger(LoginPage.class.getName());
-
   public LoginPage(WebDriver _driver) {
     driver = _driver;
 
@@ -39,12 +38,11 @@ public class LoginPage {
           String.format("Page is not My Account"));
     } else {
       PageFactory.initElements(_driver, this);
-      System.out.println("Login");
     }
   }
 
   public void login(String username, String password) {
-    log.info("Login with username: " + username + " and password: " + password);
+    Log.info("Login with username: " + username + " and password: " + password);
     in_username.sendKeys(username);
     in_password.sendKeys(password);
     btn_login.click();

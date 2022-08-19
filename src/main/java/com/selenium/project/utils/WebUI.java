@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 public class WebUI {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -64,7 +63,7 @@ public class WebUI {
                 System.out.println("load JS fail");
             }
         } catch (Throwable error) {
-            Assert.fail("Quá thời gian load trang.");
+            //Assert.fail("Quá thời gian load trang.");
         }
     }
 }
