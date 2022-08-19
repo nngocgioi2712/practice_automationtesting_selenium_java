@@ -1,0 +1,14 @@
+com\selenium\project\pages\myaccount\RegisterPage.class
+com\selenium\project\testcases\myaccount\LoginTest.class
+com\selenium\project\pages\shop\CategoriesComponent.class
+com\selenium\project\pages\shop\SelectBox.class
+com\selenium\listeners\ListenerTest.class
+com\selenium\project\testcases\shop\ShopTest.class
+com\selenium\project\pages\MenuBar.class
+com\selenium\project\pages\myaccount\LoginPage.class
+com\selenium\project\common\Helper.class
+com\selenium\project\pages\shop\FilterComponent.class
+com\selenium\project\pages\shop\ShopPage.class
+com\selenium\project\testcases\myaccount\BaseTest.class
+com\selenium\project\common\SetupDriver.class
+com\selenium\project\pages\shop\PostList.class

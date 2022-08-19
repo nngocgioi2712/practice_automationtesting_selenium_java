@@ -1,0 +1,28 @@
+14:14:39.506 INFO  myaccount.LoginTest ***Test login successful***
+14:14:39.512 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+14:14:42.105 INFO  myaccount.LoginTest test pass
+14:14:53.013 INFO  myaccount.LoginPage Login with username: nng729123 and password: 1234
+14:15:07.494 INFO  myaccount.LoginPage Login with username: nng729 and password: 
+14:15:21.565 INFO  myaccount.LoginPage Login with username:  and password: Lta@#3499
+14:15:34.967 INFO  myaccount.LoginPage Login with username:  and password: 
+14:15:43.073 INFO  shop.ShopTest ***Filter by Price Test***
+14:46:26.492 INFO  myaccount.LoginTest ***Test login successful***
+14:46:26.498 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+14:46:29.173 INFO  myaccount.LoginTest test pass
+14:46:40.470 INFO  myaccount.LoginPage Login with username: nng729123 and password: 1234
+14:46:54.183 INFO  myaccount.LoginPage Login with username: nng729 and password: 
+14:47:08.315 INFO  myaccount.LoginPage Login with username:  and password: Lta@#3499
+14:47:20.839 INFO  myaccount.LoginPage Login with username:  and password: 
+14:47:29.891 INFO  shop.ShopTest ***Filter by Price Test***
+21:21:27.643 INFO  myaccount.LoginTest ***Test login successful***
+21:21:27.649 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+21:21:30.459 ERROR myaccount.LoginTest test fail
+21:22:01.938 INFO  myaccount.LoginTest ***Test login with incorrect username and password***
+21:22:01.938 INFO  myaccount.LoginPage Login with username: nng729123 and password: 1234
+21:22:25.829 INFO  myaccount.LoginTest ***Test login with empty password***
+21:22:25.829 INFO  myaccount.LoginPage Login with username: nng729 and password: 
+21:22:46.143 INFO  myaccount.LoginTest ***Test login with empty username***
+21:22:46.143 INFO  myaccount.LoginPage Login with username:  and password: Lta@#3499
+21:23:21.271 INFO  myaccount.LoginTest ***Test login with empty username and password***
+21:23:21.271 INFO  myaccount.LoginPage Login with username:  and password: 
+21:23:30.424 INFO  shop.ShopTest ***Filter by Price Test***

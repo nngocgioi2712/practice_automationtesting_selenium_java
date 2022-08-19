@@ -1,0 +1,8 @@
+22:08:36.165 INFO  myaccount.LoginTest ***Test login successful***
+22:08:36.178 INFO  myaccount.LoginPage Login with username: nng729 and password: Lta@#3499
+22:08:38.422 INFO  myaccount.LoginTest test pass
+22:08:49.373 INFO  myaccount.LoginPage Login with username: nng729123 and password: 1234
+22:09:03.670 INFO  myaccount.LoginPage Login with username: nng729 and password: 
+22:09:16.487 INFO  myaccount.LoginPage Login with username:  and password: Lta@#3499
+22:09:30.550 INFO  myaccount.LoginPage Login with username:  and password: 
+22:09:37.956 INFO  shop.ShopTest ***Filter by Price Test***
