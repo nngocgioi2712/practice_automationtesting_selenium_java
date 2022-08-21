@@ -15,32 +15,38 @@ public class ListenerTest implements ITestListener {
 
   @Override
   public void onTestSuccess(ITestResult result) {
-    Log.info("Testcase passed: " + result.getName());
-    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
+    Log.info("Testcase '" + result.getName() + "' passed.");
 
   }
 
   @Override
-  public void onTestFailure(ITestResult result) {}
+  public void onTestFailure(ITestResult result) {
+    Log.info(result.getName() + " failed.");
+    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
+  }
 
   @Override
-  public void onTestSkipped(ITestResult result) {}
+  public void onTestSkipped(ITestResult result) {
+    Log.info(result.getName() + " skipped.");
+    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
+  }
 
   @Override
   public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
 
   @Override
   public void onTestFailedWithTimeout(ITestResult result) {
-    this.onTestFailure(result);
+    Log.info(result.getName() + " failed with timeout.");
+    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
   }
 
   @Override
   public void onStart(ITestContext context) {
-      Log.info("Start Scenario");
+      Log.debug("***********Start Scenario**************");
   }
 
   @Override
   public void onFinish(ITestContext context) {
-      Log.info("Finish Scenario");
+      Log.info("*************Finish Scenario************");
   }
 }

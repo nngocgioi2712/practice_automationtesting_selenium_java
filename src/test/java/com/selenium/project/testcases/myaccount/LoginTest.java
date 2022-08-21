@@ -1,19 +1,14 @@
 package com.selenium.project.testcases.myaccount;
 
 import com.selenium.project.helpers.PropertiesHelper;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(com.selenium.listeners.ListenerTest.class)
+import java.util.Locale;
+
 public class LoginTest extends BaseTest {
-  //private LoginPage loginPage;
-  //private static final Logger log = LogManager.getLogger(LoginTest.class.getName());
 
   @Test(priority = 0)
   public void loginSuccessful() {
-    //log.info("***Test login successful***");
     String username = PropertiesHelper.getValue("username");
     String password = PropertiesHelper.getValue("password");
     String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
@@ -29,7 +24,6 @@ public class LoginTest extends BaseTest {
         "\"Error: the username "
             + username
             + " is not registered on this site. If you are unsure of your username, try your email address instead.";
-    //loginPage = new LoginPage(driver);
     loginPage.login(username, password);
     loginPage.verifyInvalidUsernameText(expectedText);
   }
@@ -39,9 +33,8 @@ public class LoginTest extends BaseTest {
     String username = "nng729";
     String password = "";
     String expectedText = "Error: Password is required.";
-    //loginPage = new LoginPage(driver);
     loginPage.login(username, password);
-    loginPage.verifyErrorText(expectedText);
+    loginPage.verifyRequiredText(expectedText);
   }
 
   @Test(priority = 3)
@@ -49,9 +42,8 @@ public class LoginTest extends BaseTest {
     String username = "";
     String password = "Lta@#3499";
     String expectedText = "Error: Username is required.";
-    //loginPage = new LoginPage(driver);
     loginPage.login(username, password);
-    loginPage.verifyErrorText(expectedText);
+    loginPage.verifyRequiredText(expectedText);
   }
 
   @Test(priority = 4)
@@ -59,33 +51,30 @@ public class LoginTest extends BaseTest {
     String username = "";
     String password = "";
     String expectedText = "Error: Username is required.";
-    //loginPage = new LoginPage(driver);
     loginPage.login(username, password);
-    loginPage.verifyErrorText(expectedText);
+    loginPage.verifyRequiredText(expectedText);
   }
   @Test
   public void loginWithPasswordMasked() {
+    String username = "";
     String password = "12345";
-    loginPage.login("", password);
+    loginPage.login(username, password);
     loginPage.verifyPasswordMasked();
   }
   @Test
   public void loginWithUsernameChangeCase() {
-    String username = "NNG729";
+    String username = PropertiesHelper.getValue("username").toUpperCase(Locale.ROOT);
     String password = PropertiesHelper.getValue("password");
     String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
     loginPage.login(username, password);
     loginPage.verifySuccessText(expectedText);
   }
-
+  @Test
   public void loginWithPasswordChangeCase() {
-    String username = "nng729";
-    String password = "lTA@#3499";
+    String username = PropertiesHelper.getValue("username");
+    String password = PropertiesHelper.getValue("password").toUpperCase(Locale.ROOT);
     String expectedText = "Error: the password you entered for the username " + username + " is incorrect. Lost your password?";
     loginPage.login(username, password);
-    loginPage.verifyErrorText(expectedText);
-  }
-  public void loginAuthentication(){
-    loginSuccessful();
+    loginPage.verifyInvalidPasswordText(expectedText);
   }
 }

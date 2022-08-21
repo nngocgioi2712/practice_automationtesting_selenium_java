@@ -15,14 +15,6 @@ import java.util.List;
 public class ShopPage {
   private WebDriver driver;
 
-
-
-
-
-
-
-
-
   private static final Logger log = LogManager.getLogger(ShopPage.class.getName());
 
   public ShopPage(WebDriver _driver) {

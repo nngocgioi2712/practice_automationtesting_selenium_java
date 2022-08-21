@@ -13,11 +13,8 @@ public class BaseTest extends SetupDriver {
 
   @BeforeMethod
   public void beforeBaseTest() throws Exception {
-    //helper = new Helper(driver);
     menuBar = new MenuBar(driver);
-
     Thread.sleep(3000);
-    //helper.waitForPageLoaded();
     loginPage = menuBar.OpenMyAccountPage();
   }
 }

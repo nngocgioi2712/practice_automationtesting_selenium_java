@@ -6,8 +6,6 @@ import com.selenium.project.pages.shop.CategoriesComponent;
 import com.selenium.project.pages.shop.FilterComponent;
 import com.selenium.project.pages.shop.PostList;
 import com.selenium.project.pages.shop.SelectBox;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,7 +16,6 @@ public class ShopTest extends SetupDriver {
   private CategoriesComponent categoriesComponent;
   private SelectBox selectBox;
   private PostList postList;
-  private static final Logger log = LogManager.getLogger(ShopTest.class.getName());
 
   @BeforeMethod
   public void beforeShopTest(){
@@ -29,7 +26,6 @@ public class ShopTest extends SetupDriver {
     int minPrice = 150;
     int maxPrice = 451;
     int xOffset = -28;
-    log.info("***Filter by Price Test***");
     menuBar.openShopMenu();
     filterComponent = new FilterComponent(driver);
     postList = new PostList(driver);
@@ -39,7 +35,7 @@ public class ShopTest extends SetupDriver {
   }
 
   @Test
-  public void testProductCategories() throws Exception {
+  public void testProductCategories() {
     String menu = "JavaScript";
     String[] expectedResultText = {"JavaScript", "JS"};
     menuBar.openShopMenu();
@@ -51,15 +47,15 @@ public class ShopTest extends SetupDriver {
   }
 
   @Test
-  public void sortByPopularity() throws Exception {
+  public void sortByPopularity() {
   }
 
   @Test
-  public void sortByAverageRatings() throws Exception {
+  public void sortByAverageRatings() {
   }
 
   @Test
-  public void sortByNewnessRatings() throws Exception {
+  public void sortByNewnessRatings() {
   }
 
   @Test

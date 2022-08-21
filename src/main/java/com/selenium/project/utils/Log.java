@@ -18,4 +18,5 @@ public class Log {
   public static void debug(String message) {
     log.debug(message);
   }
+  public static void fatal(String message) { log.fatal(message); }
 }

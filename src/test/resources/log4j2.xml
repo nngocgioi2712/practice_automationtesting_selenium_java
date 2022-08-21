@@ -1,6 +1,6 @@
 <configuration>
   <properties>
-    <property name="basePath">./logs</property>
+    <property name="basePath">./ExportData/logs</property>
   </properties>
   <appenders>
     <rollingfile name="File" filepattern="${basePath}/app-%d{yyyy-MM-dd}.log">
@@ -17,7 +17,7 @@
   </appenders>
   <loggers>
     <root level="info">
-      <appenderref ref="Console">
+      <appenderref ref="File">
       </appenderref>
     </root>
   </loggers>

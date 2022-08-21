@@ -27,7 +27,6 @@ public class MenuBar {
     }
   }
 
-
   public LoginPage OpenMyAccountPage() {
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_myAccount));

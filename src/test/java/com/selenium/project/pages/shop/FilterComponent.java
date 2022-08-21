@@ -16,7 +16,7 @@ public class FilterComponent {
     private WebElement sp_maxPrice;
 
     @FindBy(xpath = "//div[@class = \"price_slider_wrapper\"]/div/span[2]")
-    private WebElement note_max;
+    private WebElement sp_noteMax;
 
     @FindBy(xpath = "//button[text() = 'Filter']")
     private WebElement btn_filter;
@@ -28,7 +28,7 @@ public class FilterComponent {
 
     public void filterPrice(int xOffset) {
         Actions action = new Actions(driver);
-        action.dragAndDropBy(note_max, xOffset, 0).build().perform();
+        action.dragAndDropBy(sp_noteMax, xOffset, 0).build().perform();
         btn_filter.click();
     }
     public boolean verifyPriceInFilter(int minPrice, int maxPrice) {
