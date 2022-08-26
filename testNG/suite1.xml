@@ -8,17 +8,12 @@
     <classes>
       <class name="com.selenium.project.testcases.myaccount.LoginTest">
       </class>
+    </classes>
+  </test>
+  <test name="ShopTest">
+    <classes>
       <class name="com.selenium.project.testcases.shop.ShopTest">
-        <methods>
-          <include name="filterByPrice"/>
-          <include name="testProductCategories"/>
-          <include name = "sortByLowToHigh"/>
-          <include name = "sortByHighToLow"/>
-          <include name = "sortByLowToHigh"/>
-          <include name = "sortByHighToLow"/>
-        </methods>
       </class>
     </classes>
-
   </test>
 </suite>

@@ -18,8 +18,9 @@ public class ShopTest extends SetupDriver {
   private PostList postList;
 
   @BeforeMethod
-  public void beforeShopTest(){
+  public void beforeShopTest() throws Exception {
     menuBar = new MenuBar(driver);
+    Thread.sleep(3000);
   }
   @Test
   public void filterByPrice() throws Exception {
@@ -46,15 +47,15 @@ public class ShopTest extends SetupDriver {
     Assert.assertTrue(postList.verifyNameOfProduct(expectedResultText));
   }
 
-  @Test
+
   public void sortByPopularity() {
   }
 
-  @Test
+
   public void sortByAverageRatings() {
   }
 
-  @Test
+
   public void sortByNewnessRatings() {
   }
 

@@ -1,10 +1,14 @@
 package com.selenium.project.testcases.myaccount;
 
+import com.selenium.listeners.ListenerTest;
 import com.selenium.project.helpers.PropertiesHelper;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Locale;
 
+@Listeners(ListenerTest.class)
 public class LoginTest extends BaseTest {
 
   @Test(priority = 0)
@@ -50,9 +54,9 @@ public class LoginTest extends BaseTest {
   public void loginWithEmptyUsernameAndPassword() {
     String username = "";
     String password = "";
-    String expectedText = "Error: Username is required.";
+    String expectedText = "Errorrrrr: Username is required.";
     loginPage.login(username, password);
-    loginPage.verifyRequiredText(expectedText);
+    Assert.assertTrue(loginPage.verifyRequiredText(expectedText));
   }
   @Test
   public void loginWithPasswordMasked() {

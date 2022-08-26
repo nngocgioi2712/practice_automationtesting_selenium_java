@@ -21,7 +21,7 @@ public class ListenerTest implements ITestListener {
 
   @Override
   public void onTestFailure(ITestResult result) {
-    Log.info(result.getName() + " failed.");
+    Log.error(result.getName() + " failed.");
     Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
   }
 
