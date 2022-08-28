@@ -40,27 +40,42 @@ public class LoginPage {
 
   public boolean verifySuccessText(String expectedText) {
     if (lbl_welcome.getText().equals(expectedText)) return true;
-    else return false;
+    else {
+      Log.error("Actual text is \"" + msg_invalidFields.getText() + "\" and Expected text is \"" + expectedText + "\"");
+      return false;
+    }
   }
 
   public boolean verifyRequiredText(String expectedText) {
     if (msg_RequiredFields.getText().equals(expectedText)) return true;
-    else return false;
+    else {
+      Log.error("Actual text is \"" + msg_invalidFields.getText() + "\" and Expected text is \"" + expectedText + "\"");
+      return false;
+    }
   }
 
   public boolean verifyInvalidUsernameText(String expectedText) {
     if (msg_invalidFields.getText().equals(expectedText)) return true;
-    else return false;
+    else {
+      Log.error("Actual text is \"" + msg_invalidFields.getText() + "\" and Expected text is \"" + expectedText + "\"");
+      return false;
+    }
   }
 
   public boolean verifyInvalidPasswordText(String expectedText) {
     if (msg_invalidFields.getText().equals(expectedText)) return true;
-    else return false;
+    else {
+      Log.error("Actual text is \"" + msg_invalidFields.getText() + "\" and Expected text is \"" + expectedText + "\"");
+      return false;
+    }
   }
 
   public boolean verifyPasswordMasked(){
-    if(txt_password.getText().contains("*")){
+    if(txt_password.getAttribute("type").equals("password")){
       return true;
-    } else return false;
+    } else {
+      Log.error("Type of input is \"" + txt_password.getAttribute("type") + "\"");
+      return false;
+    }
   }
 }
