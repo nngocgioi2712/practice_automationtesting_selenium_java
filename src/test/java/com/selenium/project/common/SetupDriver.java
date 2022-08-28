@@ -34,8 +34,8 @@ public class SetupDriver {
   }
 
   public WebDriver initChromeDriver() {
-    WebDriverManager.chromedriver().setup();
-    //System.setProperty("webdriver.chrome.driver", "D:\\0.GIOINN\\AUTO_selenium\\chromedriver.exe");
+    //WebDriverManager.chromedriver().setup();
+    System.setProperty("webdriver.chrome.driver", "./driver_chrome/chromedriver.exe");
     return new ChromeDriver();
   }
 
@@ -47,12 +47,12 @@ public class SetupDriver {
   @BeforeMethod
   public void setUp() {
     setDriver();
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
   }
 
   @AfterMethod
   public void tearDown() {
-    driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    //driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     driver.quit();
   }
 }
