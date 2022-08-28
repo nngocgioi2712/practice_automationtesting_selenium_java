@@ -14,7 +14,7 @@ public class BaseTest extends SetupDriver {
   @BeforeMethod
   public void beforeBaseTest() throws Exception {
     menuBar = new MenuBar(driver);
-    Thread.sleep(3000);
+    //Thread.sleep(3000);
     loginPage = menuBar.OpenMyAccountPage();
   }
 }

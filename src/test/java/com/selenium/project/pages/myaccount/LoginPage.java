@@ -32,7 +32,7 @@ public class LoginPage {
   }
 
   public void login(String username, String password) {
-    Log.info("Login with username: '" + username + "' and password: '" + password + "'");
+    Log.info("Login with username: \"" + username + "\" and password: \"" + password + "\"");
     txt_username.sendKeys(username);
     txt_password.sendKeys(password);
     btn_login.click();
