@@ -16,7 +16,7 @@
     </console>
   </appenders>
   <loggers>
-    <root level="info">
+    <root level="error">
       <appenderref ref="File">
       </appenderref>
     </root>

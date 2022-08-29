@@ -22,7 +22,7 @@ public class SetupDriver {
         driver = initFireFoxDriver();
         break;
       default:
-        System.out.println("Browse " + PropertiesHelper.getValue("browser") + "is invalid. Launching Chrome ...");
+        System.out.println("Browser " + PropertiesHelper.getValue("browser") + "is invalid. Launching Chrome ...");
         driver = initChromeDriver();
     }
     driver.manage().window().maximize();

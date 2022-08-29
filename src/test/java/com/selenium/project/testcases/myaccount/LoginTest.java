@@ -1,14 +1,11 @@
 package com.selenium.project.testcases.myaccount;
 
-import com.selenium.listeners.ListenerTest;
 import com.selenium.project.helpers.PropertiesHelper;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Locale;
 
-@Listeners(ListenerTest.class)
 public class LoginTest extends BaseTest {
 
   @Test(priority = 0)
@@ -17,7 +14,7 @@ public class LoginTest extends BaseTest {
     String password = PropertiesHelper.getValue("password");
     String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
     loginPage.login(username, password);
-    loginPage.verifySuccessText(expectedText);
+    Assert.assertTrue(loginPage.verifySuccessText(expectedText));
   }
 
   @Test(priority = 1)
@@ -25,11 +22,11 @@ public class LoginTest extends BaseTest {
     String username = "nng729123";
     String password = "1234";
     String expectedText =
-        "\"Error: the username "
+        "Error: the username "
             + username
             + " is not registered on this site. If you are unsure of your username, try your email address instead.";
     loginPage.login(username, password);
-    loginPage.verifyInvalidUsernameText(expectedText);
+    Assert.assertTrue(loginPage.verifyInvalidUsernameText(expectedText));
   }
 
   @Test(priority = 2)
@@ -38,7 +35,7 @@ public class LoginTest extends BaseTest {
     String password = "";
     String expectedText = "Error: Password is required.";
     loginPage.login(username, password);
-    loginPage.verifyRequiredText(expectedText);
+    Assert.assertTrue(loginPage.verifyRequiredText(expectedText));
   }
 
   @Test(priority = 3)
@@ -47,14 +44,14 @@ public class LoginTest extends BaseTest {
     String password = "Lta@#3499";
     String expectedText = "Error: Username is required.";
     loginPage.login(username, password);
-    loginPage.verifyRequiredText(expectedText);
+    Assert.assertTrue(loginPage.verifyRequiredText(expectedText));
   }
 
   @Test(priority = 4)
   public void loginWithEmptyUsernameAndPassword() {
     String username = "";
     String password = "";
-    String expectedText = "Errorrrrr: Username is required.";
+    String expectedText = "Error: Username is required.";
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifyRequiredText(expectedText));
   }
@@ -63,15 +60,15 @@ public class LoginTest extends BaseTest {
     String username = "";
     String password = "12345";
     loginPage.login(username, password);
-    loginPage.verifyPasswordMasked();
+    Assert.assertTrue(loginPage.verifyPasswordMasked());
   }
   @Test
   public void loginWithUsernameChangeCase() {
     String username = PropertiesHelper.getValue("username").toUpperCase(Locale.ROOT);
     String password = PropertiesHelper.getValue("password");
-    String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
+    String expectedText = "Hello " + username.toLowerCase() + " (not " + username.toLowerCase() + "? Sign out)";
     loginPage.login(username, password);
-    loginPage.verifySuccessText(expectedText);
+    Assert.assertTrue(loginPage.verifySuccessText(expectedText));
   }
   @Test
   public void loginWithPasswordChangeCase() {
@@ -79,6 +76,6 @@ public class LoginTest extends BaseTest {
     String password = PropertiesHelper.getValue("password").toUpperCase(Locale.ROOT);
     String expectedText = "Error: the password you entered for the username " + username + " is incorrect. Lost your password?";
     loginPage.login(username, password);
-    loginPage.verifyInvalidPasswordText(expectedText);
+    Assert.assertTrue(loginPage.verifyInvalidPasswordText(expectedText));
   }
 }

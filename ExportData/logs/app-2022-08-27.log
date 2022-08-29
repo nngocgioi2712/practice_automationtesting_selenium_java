@@ -1,0 +1,87 @@
+22:09:21.758 [INFO ] utils.Log Start testcase: loginSuccessful
+22:09:22.174 [INFO ] utils.Log Login with username: 'nng729' and password: 'Lta@#3499'
+22:09:24.016 [INFO ] utils.Log Testcase 'loginSuccessful' passed.
+22:09:36.161 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+22:09:36.162 [INFO ] utils.Log Login with username: 'nng729' and password: 'LTA@#3499'
+22:09:38.604 [INFO ] utils.Log Testcase 'loginWithPasswordChangeCase' passed.
+22:09:51.372 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+22:09:51.372 [INFO ] utils.Log Login with username: '' and password: '12345'
+22:09:53.712 [ERROR] utils.Log Actual text is 
+22:09:53.714 [ERROR] utils.Log loginWithPasswordMasked failed.
+22:09:53.873 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordMasked_27082022220953.png'
+22:10:07.800 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+22:10:07.801 [INFO ] utils.Log Login with username: 'NNG729' and password: 'Lta@#3499'
+22:10:09.791 [ERROR] utils.Log Actual text is Hello nng729 (not nng729? Sign out) and Expected text is Hello NNG729 (not NNG729? Sign out)
+22:10:09.791 [ERROR] utils.Log loginWithUsernameChangeCase failed.
+22:10:10.371 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithUsernameChangeCase_27082022221010.png'
+22:10:23.903 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+22:10:23.904 [INFO ] utils.Log Login with username: 'nng729123' and password: '1234'
+22:10:25.989 [ERROR] utils.Log Actual text is Error: the username nng729123 is not registered on this site. If you are unsure of your username, try your email address instead. and Expected text is "Error: the username nng729123 is not registered on this site. If you are unsure of your username, try your email address instead.
+22:10:25.989 [ERROR] utils.Log loginWithIncorrectUsernameAndPassword failed.
+22:10:26.134 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithIncorrectUsernameAndPassword_27082022221026.png'
+22:10:41.202 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+22:10:41.202 [INFO ] utils.Log Login with username: 'nng729' and password: ''
+22:10:43.151 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+22:10:55.315 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+22:10:55.316 [INFO ] utils.Log Login with username: '' and password: 'Lta@#3499'
+22:10:57.131 [INFO ] utils.Log Testcase 'loginWithEmptyUsername' passed.
+22:11:10.128 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+22:11:10.128 [INFO ] utils.Log Login with username: '' and password: ''
+22:11:12.199 [INFO ] utils.Log Testcase 'loginWithEmptyUsernameAndPassword' passed.
+22:11:19.106 [INFO ] utils.Log Start testcase: filterByPrice
+22:11:24.318 [INFO ] utils.Log Testcase 'filterByPrice' passed.
+22:11:31.097 [INFO ] utils.Log Start testcase: sortByAverageRatings
+22:11:31.097 [INFO ] utils.Log Testcase 'sortByAverageRatings' passed.
+22:11:38.218 [INFO ] utils.Log Start testcase: sortByHighToLow
+22:11:42.401 [INFO ] utils.Log Testcase 'sortByHighToLow' passed.
+22:11:49.661 [INFO ] utils.Log Start testcase: sortByLowToHigh
+22:11:53.722 [INFO ] utils.Log Testcase 'sortByLowToHigh' passed.
+22:11:59.817 [INFO ] utils.Log Start testcase: sortByNewnessRatings
+22:11:59.818 [INFO ] utils.Log Testcase 'sortByNewnessRatings' passed.
+22:12:06.352 [INFO ] utils.Log Start testcase: sortByPopularity
+22:12:06.352 [INFO ] utils.Log Testcase 'sortByPopularity' passed.
+22:12:11.916 [INFO ] utils.Log Start testcase: testProductCategories
+22:12:16.694 [INFO ] utils.Log Testcase 'testProductCategories' passed.
+22:12:17.433 [INFO ] utils.Log *************Finish Scenario************
+22:19:15.430 [INFO ] utils.Log Start testcase: loginSuccessful
+22:19:15.436 [INFO ] utils.Log Login with username: 'nng729' and password: 'Lta@#3499'
+22:19:18.056 [INFO ] utils.Log Testcase 'loginSuccessful' passed.
+22:19:32.886 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+22:19:32.888 [INFO ] utils.Log Login with username: 'nng729' and password: 'LTA@#3499'
+22:19:36.985 [INFO ] utils.Log Testcase 'loginWithPasswordChangeCase' passed.
+22:19:51.897 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+22:19:51.897 [INFO ] utils.Log Login with username: '' and password: '12345'
+22:19:57.174 [ERROR] utils.Log Actual text is ""
+22:19:57.176 [ERROR] utils.Log loginWithPasswordMasked failed.
+22:19:57.815 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordMasked_27082022221957.png'
+22:20:14.582 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+22:20:14.582 [INFO ] utils.Log Login with username: 'NNG729' and password: 'Lta@#3499'
+22:20:16.527 [INFO ] utils.Log Testcase 'loginWithUsernameChangeCase' passed.
+22:20:43.711 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+22:20:43.711 [INFO ] utils.Log Login with username: 'nng729123' and password: '1234'
+22:20:49.358 [INFO ] utils.Log Testcase 'loginWithIncorrectUsernameAndPassword' passed.
+22:21:07.851 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+22:21:07.851 [INFO ] utils.Log Login with username: 'nng729' and password: ''
+22:21:12.638 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+22:21:24.535 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+22:21:24.536 [INFO ] utils.Log Login with username: '' and password: 'Lta@#3499'
+22:21:27.007 [INFO ] utils.Log Testcase 'loginWithEmptyUsername' passed.
+22:21:38.111 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+22:21:38.112 [INFO ] utils.Log Login with username: '' and password: ''
+22:21:40.440 [INFO ] utils.Log Testcase 'loginWithEmptyUsernameAndPassword' passed.
+22:21:48.574 [INFO ] utils.Log Start testcase: filterByPrice
+22:21:57.072 [INFO ] utils.Log Testcase 'filterByPrice' passed.
+22:22:07.466 [INFO ] utils.Log Start testcase: sortByAverageRatings
+22:22:07.467 [INFO ] utils.Log Testcase 'sortByAverageRatings' passed.
+22:22:14.792 [INFO ] utils.Log Start testcase: sortByHighToLow
+22:22:19.948 [INFO ] utils.Log Testcase 'sortByHighToLow' passed.
+22:22:25.605 [INFO ] utils.Log Start testcase: sortByLowToHigh
+22:22:30.839 [INFO ] utils.Log Testcase 'sortByLowToHigh' passed.
+22:22:36.802 [INFO ] utils.Log Start testcase: sortByNewnessRatings
+22:22:36.802 [INFO ] utils.Log Testcase 'sortByNewnessRatings' passed.
+22:22:43.822 [INFO ] utils.Log Start testcase: sortByPopularity
+22:22:43.823 [INFO ] utils.Log Testcase 'sortByPopularity' passed.
+22:22:50.691 [INFO ] utils.Log Start testcase: testProductCategories
+22:22:59.078 [INFO ] utils.Log Testcase 'testProductCategories' passed.
+22:22:59.917 [INFO ] utils.Log *************Finish Scenario************
+22:32:48.565 [INFO ] utils.Log Login with username: '' and password: '12345'
