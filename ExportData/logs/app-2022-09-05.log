@@ -1,0 +1,27 @@
+19:47:28.418 [INFO ] utils.Log Login with username: "abc" and password: "Lta@#3433"
+19:47:32.203 [ERROR] utils.Log Actual text is "Error: the password you entered for the username abc is incorrect. Lost your password?" and Expected text is "Error: the username abc is not registered on this site. If you are unsure of your username, try your email address instead."
+19:47:56.057 [INFO ] utils.Log Login with username: "abc1" and password: "Lta#$122"
+19:47:58.791 [ERROR] utils.Log Actual text is "Error: the password you entered for the username abc1 is incorrect. Lost your password?" and Expected text is "Error: the username abc1 is not registered on this site. If you are unsure of your username, try your email address instead."
+19:52:05.681 [INFO ] utils.Log Login with username: "abcxyzasn" and password: "Lta@#3433"
+19:52:27.235 [INFO ] utils.Log Login with username: "abc1zxss" and password: "Lta#$122"
+20:17:57.647 [INFO ] utils.Log Login with username: "nng729" and password: "LTA@#3499"
+20:18:17.453 [INFO ] utils.Log Login with username: "" and password: "12345"
+20:18:35.776 [INFO ] utils.Log Login with username: "NNG729" and password: "Lta@#3499"
+20:23:22.348 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+20:23:40.651 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+20:25:18.562 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+20:27:09.377 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+20:27:30.924 [INFO ] utils.Log Login with username: "nng72923" and password: "Lta@#3499"
+21:15:07.564 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+21:15:07.570 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+21:15:09.151 [INFO ] utils.Log Testcase 'loginWithIncorrectUsernameAndPassword' passed.
+21:15:22.371 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+21:15:22.372 [INFO ] utils.Log Login with username: "nng72923" and password: "Lta@#3499"
+21:15:25.593 [INFO ] utils.Log Testcase 'loginWithIncorrectUsernameAndPassword' passed.
+21:15:52.881 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+21:15:52.881 [INFO ] utils.Log Login with username: "nng729" and password: ""
+21:15:55.475 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+21:16:07.471 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+21:16:07.471 [INFO ] utils.Log Login with username: "nng729" and password: ""
+21:16:09.611 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+21:16:10.368 [INFO ] utils.Log *************Finish Scenario************

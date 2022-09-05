@@ -14,6 +14,7 @@ public class WebUI {
         wait = new WebDriverWait(driver, 10);
     }
     public static void setText(WebElement element, String value){
+        element.clear();
         element.sendKeys(value);
     }
     public static String getText(WebElement element){

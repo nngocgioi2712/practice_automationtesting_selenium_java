@@ -64,7 +64,7 @@ public class ShopTest extends SetupDriver {
     menuBar.openShopMenu();
     selectBox = new SelectBox(driver);
     postList = new PostList(driver);
-    selectBox.clickSortPriceLowToHigh();
+    selectBox.select("price");
     postList.verifySortPriceLowToHigh();
   }
 
@@ -73,7 +73,7 @@ public class ShopTest extends SetupDriver {
     menuBar.openShopMenu();
     selectBox = new SelectBox(driver);
     postList = new PostList(driver);
-    selectBox.clickSortPriceHighToLow();
+    selectBox.select("price-desc");
     postList.verifySortPriceHighToLow();
   }
 }
