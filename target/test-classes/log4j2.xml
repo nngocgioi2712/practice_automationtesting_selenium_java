@@ -1,0 +1,24 @@
+<configuration>
+  <properties>
+    <property name="basePath">./ExportData/logs</property>
+  </properties>
+  <appenders>
+    <rollingfile name="File" filepattern="${basePath}/app-%d{yyyy-MM-dd}.log">
+      <patternlayout pattern="%d{HH:mm:ss.SSS} [%-5level] %c{2} %msg%n"></patternlayout>
+      <policies>
+        <timebasedtriggeringpolicy interval="1" modulate="true">
+        </timebasedtriggeringpolicy>
+      </policies>
+    </rollingfile>
+    <console name="Console">
+      <patternlayout pattern="%d{HH:mm:ss.SSS} [%-5level] %c{1} %msg%n">
+      </patternlayout>
+    </console>
+  </appenders>
+  <loggers>
+    <root level="error">
+      <appenderref ref="File">
+      </appenderref>
+    </root>
+  </loggers>
+</configuration>
