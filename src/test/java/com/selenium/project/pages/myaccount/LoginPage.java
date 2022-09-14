@@ -1,6 +1,7 @@
 package com.selenium.project.pages.myaccount;
 
 import com.selenium.project.utils.Log;
+import com.selenium.project.utils.WebUI;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,8 +34,8 @@ public class LoginPage {
 
   public void login(String username, String password) {
     Log.info("Login with username: \"" + username + "\" and password: \"" + password + "\"");
-    txt_username.sendKeys(username);
-    txt_password.sendKeys(password);
+    WebUI.setText(txt_username, username);
+    WebUI.setText(txt_password, password);
     btn_login.click();
   }
 

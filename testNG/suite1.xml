@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite 1">
+  <parameter name="username" value="nng729"></parameter>
+  <parameter name="password" value="Lta@#3499"></parameter>
   <listeners>
     <listener class-name="com.selenium.listeners.ListenerTest"></listener>
   </listeners>
   <test name="Login test">
     <classes>
       <class name="com.selenium.project.testcases.myaccount.LoginTest">
+        <methods>
+          <include name="loginWithIncorrectUsernameAndPassword"/>
+          <include name="loginWithEmptyPassword"/>
+        </methods>
       </class>
     </classes>
   </test>
-  <test name="ShopTest">
+  <!--<test name="ShopTest">
     <classes>
       <class name="com.selenium.project.testcases.shop.ShopTest">
       </class>
     </classes>
-  </test>
+  </test>-->
 </suite>

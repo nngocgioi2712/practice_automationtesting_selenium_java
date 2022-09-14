@@ -1,0 +1,47 @@
+08:53:25.122 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+08:53:31.341 [INFO ] utils.Log null
+08:53:31.341 [INFO ] utils.Log null
+08:53:31.341 [INFO ] utils.Log Login with username: "" and password: ""
+08:54:39.084 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+08:54:42.273 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+08:54:44.868 [ERROR] utils.Log Actual text is "Error: the username nng279nng729 is not registered on this site. If you are unsure of your username, try your email address instead." and Expected text is "Error: the username nng729 is not registered on this site. If you are unsure of your username, try your email address instead."
+08:59:07.005 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+08:59:54.289 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+09:00:16.257 [ERROR] utils.Log Actual text is "Error: the username nng279nng729 is not registered on this site. If you are unsure of your username, try your email address instead." and Expected text is "Error: the username nng729 is not registered on this site. If you are unsure of your username, try your email address instead."
+09:03:03.835 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+09:03:06.881 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+13:18:28.582 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+13:18:31.476 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+13:19:22.531 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+13:19:25.428 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+13:21:47.276 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+13:22:50.188 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+13:23:48.077 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+13:25:22.117 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+15:01:08.388 [INFO ] utils.Log Start testcase: loginSuccessful
+15:01:08.395 [INFO ] utils.Log loginSuccessful skipped.
+15:01:09.469 [INFO ] utils.Log Capture image in 'ExportData\images\loginSuccessful_03092022150109.png'
+15:01:09.475 [INFO ] utils.Log *************Finish Scenario************
+15:02:48.897 [INFO ] utils.Log Start testcase: loginSuccessful
+15:02:48.913 [INFO ] utils.Log loginSuccessful skipped.
+15:02:49.114 [INFO ] utils.Log Capture image in 'ExportData\images\loginSuccessful_03092022150249.png'
+15:02:49.120 [INFO ] utils.Log *************Finish Scenario************
+15:13:23.825 [INFO ] utils.Log Start testcase: loginSuccessful
+15:13:23.834 [INFO ] utils.Log loginSuccessful skipped.
+15:13:23.965 [INFO ] utils.Log Capture fail: 'no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.102)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.1.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50505}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9b4b46165ab1bb4c51ac1e53087389c9'
+15:13:23.981 [INFO ] utils.Log *************Finish Scenario************
+15:14:50.000 [INFO ] utils.Log Start testcase: loginSuccessful
+15:14:50.008 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+15:14:52.742 [INFO ] utils.Log Testcase 'loginSuccessful' passed.
+15:14:53.911 [INFO ] utils.Log *************Finish Scenario************
+15:17:35.780 [INFO ] utils.Log Start testcase: loginSuccessful
+15:17:35.800 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+15:17:39.178 [INFO ] utils.Log Testcase 'loginSuccessful' passed.
+15:17:39.972 [INFO ] utils.Log *************Finish Scenario************
