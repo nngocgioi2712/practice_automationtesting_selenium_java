@@ -10,16 +10,22 @@
     <classes>
       <class name="com.selenium.project.testcases.myaccount.LoginTest">
         <methods>
+          <include name="loginSuccessful"/>
           <include name="loginWithIncorrectUsernameAndPassword"/>
           <include name="loginWithEmptyPassword"/>
+          <include name="loginWithEmptyUsername"/>
+          <include name="loginWithEmptyUsernameAndPassword"/>
+          <include name="loginWithPasswordMasked"/>
+          <include name="loginWithUsernameChangeCase"/>
+          <include name="loginWithPasswordChangeCase"/>
         </methods>
       </class>
     </classes>
   </test>
-  <!--<test name="ShopTest">
+  <test name="ShopTest">
     <classes>
       <class name="com.selenium.project.testcases.shop.ShopTest">
       </class>
     </classes>
-  </test>-->
+  </test>
 </suite>

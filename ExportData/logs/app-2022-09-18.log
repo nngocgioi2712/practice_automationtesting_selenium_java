@@ -1,0 +1,297 @@
+22:53:54.848 [INFO ] utils.Log Start testcase: loginSuccessful
+22:53:54.848 [INFO ] utils.Log loginSuccessful skipped.
+22:53:54.869 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.059 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+22:53:56.059 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+22:53:56.059 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.059 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+22:53:56.062 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+22:53:56.062 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.101 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+22:53:56.101 [INFO ] utils.Log loginWithEmptyPassword skipped.
+22:53:56.101 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.103 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+22:53:56.103 [INFO ] utils.Log loginWithEmptyPassword skipped.
+22:53:56.103 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.106 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+22:53:56.106 [INFO ] utils.Log loginWithEmptyUsername skipped.
+22:53:56.106 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.108 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+22:53:56.108 [INFO ] utils.Log loginWithEmptyUsernameAndPassword skipped.
+22:53:56.108 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.109 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+22:53:56.109 [INFO ] utils.Log loginWithPasswordMasked skipped.
+22:53:56.109 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.112 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+22:53:56.112 [INFO ] utils.Log loginWithUsernameChangeCase skipped.
+22:53:56.112 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.114 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+22:53:56.114 [INFO ] utils.Log loginWithPasswordChangeCase skipped.
+22:53:56.114 [INFO ] utils.Log Capture fail: 'null'
+22:53:56.116 [INFO ] utils.Log *************Finish Scenario************
+22:54:02.967 [INFO ] utils.Log Start testcase: filterByPrice
+22:54:10.787 [INFO ] utils.Log Testcase 'filterByPrice' passed.
+22:54:18.350 [INFO ] utils.Log Start testcase: sortByHighToLow
+22:54:26.403 [INFO ] utils.Log Testcase 'sortByHighToLow' passed.
+22:54:33.310 [INFO ] utils.Log Start testcase: sortByLowToHigh
+22:54:43.526 [INFO ] utils.Log Testcase 'sortByLowToHigh' passed.
+22:54:50.405 [INFO ] utils.Log Start testcase: testProductCategories
+22:55:00.162 [INFO ] utils.Log Testcase 'testProductCategories' passed.
+22:55:02.511 [INFO ] utils.Log *************Finish Scenario************
+22:59:33.870 [INFO ] utils.Log Start testcase: filterByPrice
+22:59:38.201 [INFO ] utils.Log Start testcase: loginSuccessful
+22:59:38.202 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+22:59:38.212 [ERROR] utils.Log filterByPrice failed.
+22:59:38.603 [INFO ] utils.Log Capture image in 'ExportData\images\filterByPrice_18092022225938.png'
+22:59:38.996 [ERROR] utils.Log loginSuccessful failed.
+22:59:41.047 [INFO ] utils.Log Capture fail: 'java.net.ConnectException: Failed to connect to localhost/127.0.0.1:16381
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: RemoteWebDriver'
+22:59:55.998 [INFO ] utils.Log Start testcase: sortByHighToLow
+23:00:01.327 [ERROR] utils.Log sortByHighToLow failed.
+23:00:01.331 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:00:01.331 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+23:00:01.593 [INFO ] utils.Log Capture image in 'ExportData\images\sortByHighToLow_18092022230001.png'
+23:00:02.527 [ERROR] utils.Log loginWithIncorrectUsernameAndPassword failed.
+23:00:04.575 [INFO ] utils.Log Capture fail: 'java.net.ConnectException: Failed to connect to localhost/127.0.0.1:41859
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: RemoteWebDriver'
+23:00:23.741 [INFO ] utils.Log Start testcase: sortByLowToHigh
+23:00:28.621 [ERROR] utils.Log sortByLowToHigh failed.
+23:00:28.993 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:00:28.993 [INFO ] utils.Log Login with username: "nng72923" and password: "Lta@#3499"
+23:00:29.731 [INFO ] utils.Log Capture image in 'ExportData\images\sortByLowToHigh_18092022230029.png'
+23:00:31.688 [ERROR] utils.Log loginWithIncorrectUsernameAndPassword failed.
+23:00:33.722 [INFO ] utils.Log Capture fail: 'java.net.ConnectException: Failed to connect to localhost/127.0.0.1:1407
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: RemoteWebDriver'
+23:00:34.386 [INFO ] utils.Log Start testcase: testProductCategories
+23:00:34.386 [INFO ] utils.Log testProductCategories skipped.
+23:00:36.410 [INFO ] utils.Log Capture fail: 'java.net.ConnectException: Failed to connect to localhost/127.0.0.1:21305
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: RemoteWebDriver'
+23:00:36.668 [INFO ] utils.Log *************Finish Scenario************
+23:00:48.772 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:00:48.772 [INFO ] utils.Log Login with username: "nng729" and password: ""
+23:00:52.093 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+23:01:48.305 [INFO ] utils.Log Start testcase: loginSuccessful
+23:01:48.309 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+23:01:50.792 [INFO ] utils.Log Testcase 'loginSuccessful' passed.
+23:02:02.315 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:02:02.315 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+23:02:03.875 [INFO ] utils.Log Testcase 'loginWithIncorrectUsernameAndPassword' passed.
+23:02:12.112 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:02:12.112 [INFO ] utils.Log Login with username: "nng72923" and password: "Lta@#3499"
+23:02:13.774 [INFO ] utils.Log Testcase 'loginWithIncorrectUsernameAndPassword' passed.
+23:02:22.128 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:02:22.129 [INFO ] utils.Log Login with username: "nng729" and password: ""
+23:02:23.655 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+23:02:32.464 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:02:32.464 [INFO ] utils.Log Login with username: "nng729" and password: ""
+23:02:34.125 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+23:02:42.653 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+23:02:42.654 [INFO ] utils.Log Login with username: "" and password: "Lta@#3499"
+23:02:44.734 [INFO ] utils.Log Testcase 'loginWithEmptyUsername' passed.
+23:02:53.070 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+23:02:53.070 [INFO ] utils.Log Login with username: "" and password: ""
+23:02:54.332 [INFO ] utils.Log Testcase 'loginWithEmptyUsernameAndPassword' passed.
+23:03:03.135 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+23:03:03.136 [INFO ] utils.Log Login with username: "username" and password: "12345"
+23:03:05.172 [INFO ] utils.Log Testcase 'loginWithPasswordMasked' passed.
+23:03:12.822 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+23:03:12.823 [INFO ] utils.Log Login with username: "NNG729" and password: "Lta@#3499"
+23:03:14.901 [INFO ] utils.Log Testcase 'loginWithUsernameChangeCase' passed.
+23:03:23.054 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+23:03:23.054 [INFO ] utils.Log Login with username: "nng729" and password: "LTA@#3499"
+23:03:24.628 [INFO ] utils.Log Testcase 'loginWithPasswordChangeCase' passed.
+23:03:25.284 [INFO ] utils.Log *************Finish Scenario************
+23:03:31.492 [INFO ] utils.Log Start testcase: filterByPrice
+23:03:41.899 [INFO ] utils.Log Testcase 'filterByPrice' passed.
+23:03:47.649 [INFO ] utils.Log Start testcase: sortByHighToLow
+23:03:56.049 [INFO ] utils.Log Testcase 'sortByHighToLow' passed.
+23:04:02.814 [INFO ] utils.Log Start testcase: sortByLowToHigh
+23:04:03.354 [ERROR] utils.Log sortByLowToHigh failed.
+23:04:03.752 [INFO ] utils.Log Capture image in 'ExportData\images\sortByLowToHigh_18092022230403.png'
+23:04:09.010 [INFO ] utils.Log Start testcase: testProductCategories
+23:04:17.696 [INFO ] utils.Log Testcase 'testProductCategories' passed.
+23:04:18.496 [INFO ] utils.Log *************Finish Scenario************
+23:08:37.127 [INFO ] utils.Log Start testcase: loginSuccessful
+23:08:37.131 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+23:08:43.597 [INFO ] utils.Log Testcase 'loginSuccessful' passed.
+23:08:53.001 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:08:53.002 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+23:08:53.303 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithIncorrectUsernameAndPassword_18092022230853.png'
+23:08:53.305 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:08:53.305 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+23:08:53.517 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithIncorrectUsernameAndPassword_18092022230853.png'
+23:08:53.568 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:08:53.568 [INFO ] utils.Log loginWithEmptyPassword skipped.
+23:08:53.795 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyPassword_18092022230853.png'
+23:08:53.797 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:08:53.797 [INFO ] utils.Log loginWithEmptyPassword skipped.
+23:08:54.027 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyPassword_18092022230854.png'
+23:08:54.030 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+23:08:54.030 [INFO ] utils.Log loginWithEmptyUsername skipped.
+23:08:54.252 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsername_18092022230854.png'
+23:08:54.254 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+23:08:54.254 [INFO ] utils.Log loginWithEmptyUsernameAndPassword skipped.
+23:08:54.464 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsernameAndPassword_18092022230854.png'
+23:08:54.465 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+23:08:54.465 [INFO ] utils.Log loginWithPasswordMasked skipped.
+23:08:54.677 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordMasked_18092022230854.png'
+23:08:54.678 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+23:08:54.678 [INFO ] utils.Log loginWithUsernameChangeCase skipped.
+23:08:54.904 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithUsernameChangeCase_18092022230854.png'
+23:08:54.906 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+23:08:54.906 [INFO ] utils.Log loginWithPasswordChangeCase skipped.
+23:08:55.117 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordChangeCase_18092022230855.png'
+23:08:55.121 [INFO ] utils.Log *************Finish Scenario************
+23:09:00.637 [INFO ] utils.Log Start testcase: filterByPrice
+23:09:14.266 [INFO ] utils.Log Testcase 'filterByPrice' passed.
+23:09:24.285 [INFO ] utils.Log Start testcase: sortByHighToLow
+23:09:28.575 [INFO ] utils.Log Testcase 'sortByHighToLow' passed.
+23:09:37.532 [INFO ] utils.Log Start testcase: sortByLowToHigh
+23:10:37.915 [ERROR] utils.Log sortByLowToHigh failed.
+23:10:37.932 [INFO ] utils.Log Capture fail: 'no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56012}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0da27cd1129e102a85a14b3fee6014'
+23:10:55.260 [INFO ] utils.Log Start testcase: testProductCategories
+23:11:15.318 [INFO ] utils.Log Testcase 'testProductCategories' passed.
+23:11:18.886 [INFO ] utils.Log *************Finish Scenario************
+23:13:23.237 [INFO ] utils.Log Start testcase: loginSuccessful
+23:13:23.243 [INFO ] utils.Log Login with username: "nng729" and password: "Lta@#3499"
+23:13:26.007 [INFO ] utils.Log Testcase 'loginSuccessful' passed.
+23:13:35.975 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:13:35.976 [INFO ] utils.Log Login with username: "nng279" and password: "Lta@#3499"
+23:13:37.774 [INFO ] utils.Log Testcase 'loginWithIncorrectUsernameAndPassword' passed.
+23:13:45.979 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:13:45.979 [INFO ] utils.Log Login with username: "nng72923" and password: "Lta@#3499"
+23:13:47.752 [INFO ] utils.Log Testcase 'loginWithIncorrectUsernameAndPassword' passed.
+23:13:56.190 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:13:56.190 [INFO ] utils.Log Login with username: "nng729" and password: ""
+23:13:58.154 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+23:14:07.742 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:14:07.742 [INFO ] utils.Log Login with username: "nng729" and password: ""
+23:14:09.496 [INFO ] utils.Log Testcase 'loginWithEmptyPassword' passed.
+23:14:18.517 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+23:14:18.517 [INFO ] utils.Log loginWithEmptyUsername skipped.
+23:14:18.811 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsername_18092022231418.png'
+23:14:18.812 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+23:14:18.813 [INFO ] utils.Log loginWithEmptyUsernameAndPassword skipped.
+23:14:19.034 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsernameAndPassword_18092022231419.png'
+23:14:19.035 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+23:14:19.035 [INFO ] utils.Log loginWithPasswordMasked skipped.
+23:14:19.261 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordMasked_18092022231419.png'
+23:14:19.261 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+23:14:19.261 [INFO ] utils.Log loginWithUsernameChangeCase skipped.
+23:14:19.483 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithUsernameChangeCase_18092022231419.png'
+23:14:19.483 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+23:14:19.483 [INFO ] utils.Log loginWithPasswordChangeCase skipped.
+23:14:19.678 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordChangeCase_18092022231419.png'
+23:14:19.694 [INFO ] utils.Log *************Finish Scenario************
+23:14:26.129 [INFO ] utils.Log Start testcase: filterByPrice
+23:14:34.502 [INFO ] utils.Log Testcase 'filterByPrice' passed.
+23:14:41.959 [INFO ] utils.Log Start testcase: sortByHighToLow
+23:14:51.095 [INFO ] utils.Log Testcase 'sortByHighToLow' passed.
+23:14:57.676 [INFO ] utils.Log Start testcase: sortByLowToHigh
+23:15:08.966 [INFO ] utils.Log Testcase 'sortByLowToHigh' passed.
+23:15:16.542 [INFO ] utils.Log Start testcase: testProductCategories
+23:15:25.252 [INFO ] utils.Log Testcase 'testProductCategories' passed.
+23:15:25.948 [INFO ] utils.Log *************Finish Scenario************
+23:28:50.312 [INFO ] utils.Log Start testcase: loginSuccessful
+23:28:50.319 [INFO ] utils.Log loginSuccessful skipped.
+23:28:50.746 [INFO ] utils.Log Capture image in 'ExportData\images\loginSuccessful_18092022232850.png'
+23:28:51.898 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:28:51.898 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+23:28:52.167 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithIncorrectUsernameAndPassword_18092022232852.png'
+23:28:52.167 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:28:52.167 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+23:28:52.467 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithIncorrectUsernameAndPassword_18092022232852.png'
+23:28:52.514 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:28:52.514 [INFO ] utils.Log loginWithEmptyPassword skipped.
+23:28:52.817 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyPassword_18092022232852.png'
+23:28:52.817 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:28:52.817 [INFO ] utils.Log loginWithEmptyPassword skipped.
+23:28:53.124 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyPassword_18092022232853.png'
+23:28:53.127 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+23:28:53.127 [INFO ] utils.Log loginWithEmptyUsername skipped.
+23:28:53.384 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsername_18092022232853.png'
+23:28:53.384 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+23:28:53.384 [INFO ] utils.Log loginWithEmptyUsernameAndPassword skipped.
+23:28:53.647 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsernameAndPassword_18092022232853.png'
+23:28:53.650 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+23:28:53.650 [INFO ] utils.Log loginWithPasswordMasked skipped.
+23:28:53.895 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordMasked_18092022232853.png'
+23:28:53.895 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+23:28:53.895 [INFO ] utils.Log loginWithUsernameChangeCase skipped.
+23:28:54.169 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithUsernameChangeCase_18092022232854.png'
+23:28:54.169 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+23:28:54.169 [INFO ] utils.Log loginWithPasswordChangeCase skipped.
+23:28:54.456 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordChangeCase_18092022232854.png'
+23:28:54.456 [INFO ] utils.Log *************Finish Scenario************
+23:29:00.924 [INFO ] utils.Log Start testcase: filterByPrice
+23:29:00.924 [INFO ] utils.Log filterByPrice skipped.
+23:29:01.193 [INFO ] utils.Log Capture image in 'ExportData\images\filterByPrice_18092022232901.png'
+23:29:01.193 [INFO ] utils.Log Start testcase: sortByHighToLow
+23:29:01.193 [INFO ] utils.Log sortByHighToLow skipped.
+23:29:01.424 [INFO ] utils.Log Capture image in 'ExportData\images\sortByHighToLow_18092022232901.png'
+23:29:01.424 [INFO ] utils.Log Start testcase: sortByLowToHigh
+23:29:01.424 [INFO ] utils.Log sortByLowToHigh skipped.
+23:29:01.720 [INFO ] utils.Log Capture image in 'ExportData\images\sortByLowToHigh_18092022232901.png'
+23:29:01.723 [INFO ] utils.Log Start testcase: testProductCategories
+23:29:01.723 [INFO ] utils.Log testProductCategories skipped.
+23:29:02.031 [INFO ] utils.Log Capture image in 'ExportData\images\testProductCategories_18092022232902.png'
+23:29:02.031 [INFO ] utils.Log *************Finish Scenario************
+23:34:42.074 [INFO ] utils.Log Start testcase: loginSuccessful
+23:34:42.082 [INFO ] utils.Log loginSuccessful skipped.
+23:34:42.884 [INFO ] utils.Log Capture image in 'ExportData\images\loginSuccessful_18092022233442.png'
+23:34:44.152 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:34:44.152 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+23:34:44.551 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithIncorrectUsernameAndPassword_18092022233444.png'
+23:34:44.551 [INFO ] utils.Log Start testcase: loginWithIncorrectUsernameAndPassword
+23:34:44.551 [INFO ] utils.Log loginWithIncorrectUsernameAndPassword skipped.
+23:34:44.813 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithIncorrectUsernameAndPassword_18092022233444.png'
+23:34:44.852 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:34:44.852 [INFO ] utils.Log loginWithEmptyPassword skipped.
+23:34:45.137 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyPassword_18092022233445.png'
+23:34:45.137 [INFO ] utils.Log Start testcase: loginWithEmptyPassword
+23:34:45.137 [INFO ] utils.Log loginWithEmptyPassword skipped.
+23:34:46.607 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyPassword_18092022233446.png'
+23:34:46.607 [INFO ] utils.Log Start testcase: loginWithEmptyUsername
+23:34:46.607 [INFO ] utils.Log loginWithEmptyUsername skipped.
+23:34:46.872 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsername_18092022233446.png'
+23:34:46.872 [INFO ] utils.Log Start testcase: loginWithEmptyUsernameAndPassword
+23:34:46.872 [INFO ] utils.Log loginWithEmptyUsernameAndPassword skipped.
+23:34:47.121 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithEmptyUsernameAndPassword_18092022233447.png'
+23:34:47.121 [INFO ] utils.Log Start testcase: loginWithPasswordMasked
+23:34:47.121 [INFO ] utils.Log loginWithPasswordMasked skipped.
+23:34:47.386 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordMasked_18092022233447.png'
+23:34:47.386 [INFO ] utils.Log Start testcase: loginWithUsernameChangeCase
+23:34:47.386 [INFO ] utils.Log loginWithUsernameChangeCase skipped.
+23:34:47.636 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithUsernameChangeCase_18092022233447.png'
+23:34:47.636 [INFO ] utils.Log Start testcase: loginWithPasswordChangeCase
+23:34:47.636 [INFO ] utils.Log loginWithPasswordChangeCase skipped.
+23:34:47.871 [INFO ] utils.Log Capture image in 'ExportData\images\loginWithPasswordChangeCase_18092022233447.png'
+23:34:47.871 [INFO ] utils.Log *************Finish Scenario************
+23:35:07.038 [INFO ] utils.Log Start testcase: filterByPrice
+23:35:07.038 [INFO ] utils.Log filterByPrice skipped.
+23:35:07.319 [INFO ] utils.Log Capture image in 'ExportData\images\filterByPrice_18092022233507.png'
+23:35:07.335 [INFO ] utils.Log Start testcase: sortByHighToLow
+23:35:07.335 [INFO ] utils.Log sortByHighToLow skipped.
+23:35:07.633 [INFO ] utils.Log Capture image in 'ExportData\images\sortByHighToLow_18092022233507.png'
+23:35:07.633 [INFO ] utils.Log Start testcase: sortByLowToHigh
+23:35:07.633 [INFO ] utils.Log sortByLowToHigh skipped.
+23:35:08.012 [INFO ] utils.Log Capture image in 'ExportData\images\sortByLowToHigh_18092022233508.png'
+23:35:08.015 [INFO ] utils.Log Start testcase: testProductCategories
+23:35:08.015 [INFO ] utils.Log testProductCategories skipped.
+23:35:08.353 [INFO ] utils.Log Capture image in 'ExportData\images\testProductCategories_18092022233508.png'
+23:35:08.357 [INFO ] utils.Log *************Finish Scenario************

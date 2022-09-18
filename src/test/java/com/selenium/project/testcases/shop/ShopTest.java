@@ -18,12 +18,11 @@ public class ShopTest extends SetupDriver {
   private PostList postList;
 
   @BeforeMethod
-  public void beforeShopTest() throws Exception {
+  public void beforeShopTest(){
     menuBar = new MenuBar(driver);
-    //Thread.sleep(3000);
   }
   @Test
-  public void filterByPrice() throws Exception {
+  public void filterByPrice() {
     int minPrice = 150;
     int maxPrice = 451;
     int xOffset = -28;

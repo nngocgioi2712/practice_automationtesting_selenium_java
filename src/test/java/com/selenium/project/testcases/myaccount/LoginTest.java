@@ -14,28 +14,24 @@ public class LoginTest extends BaseTest {
   private Excel excel = new Excel();
   @DataProvider(name = "loginData")
   public Object[][] getLoginData(Method m){
-    Object[][] dataLoginIncorrect = new Object[2][2];
     if(m.getName().equalsIgnoreCase("loginWithIncorrectUsernameAndPassword")){
       excel.setExcelFile("./DataTest/login.xlsx", "IncorrectUsername");
-    } else {
+    } else if(m.getName().equalsIgnoreCase("loginWithEmptyPassword")){
       excel.setExcelFile("./DataTest/login.xlsx", "EmptyPassword");
-    }
-
-    for(int i = 0; i < 2; i++) {
+    } else {}
+      int rowNum = excel.getNumberOfRows() - 1;
+    Object[][] dataLoginIncorrect = new Object[rowNum][2];
+    for(int i = 0; i < rowNum; i++) {
       dataLoginIncorrect[i][0] = excel.getCellData("username", i + 1);
       dataLoginIncorrect[i][1] = excel.getCellData("password", i + 1);
     }
     return  dataLoginIncorrect;
-    /*return new Object[][] {
-            {"abcxyzasn", "Lta@#3433"},
-            {"abc1zxss", "Lta#$122"}
-    };*/
   }
-  @Test(priority = 0)
+  @Test
   @Parameters({"username", "password"})
   public void loginSuccessful(String username, String password) {
-//    String username = PropertiesHelper.getValue("username");
-//    String password = PropertiesHelper.getValue("password");
+    /*String username = PropertiesHelper.getValue("username");
+    String password = PropertiesHelper.getValue("password");*/
     String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifySuccessText(expectedText));
@@ -58,7 +54,7 @@ public class LoginTest extends BaseTest {
     Assert.assertTrue(loginPage.verifyRequiredText(expectedText));
   }
 
-  @Test(priority = 3)
+  @Test
   public void loginWithEmptyUsername() {
     String username = "";
     String password = "Lta@#3499";
@@ -67,7 +63,7 @@ public class LoginTest extends BaseTest {
     Assert.assertTrue(loginPage.verifyRequiredText(expectedText));
   }
 
-  @Test(priority = 4)
+  @Test
   public void loginWithEmptyUsernameAndPassword() {
     String username = "";
     String password = "";
@@ -77,7 +73,7 @@ public class LoginTest extends BaseTest {
   }
   @Test
   public void loginWithPasswordMasked() {
-    String username = "";
+    String username = "username";
     String password = "12345";
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifyPasswordMasked());

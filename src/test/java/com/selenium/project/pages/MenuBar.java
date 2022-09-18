@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MenuBar {
   private final WebDriver driver;
-
   @FindBy (partialLinkText = "My Account")
   private WebElement mnu_myAccount;
   @FindBy(partialLinkText = "Shop")
@@ -24,6 +23,9 @@ public class MenuBar {
       throw new IllegalArgumentException(
           String.format("This is not Automation Practice Site"));
     } else {
+      driver.switchTo().frame("aswift_9");
+      Advertisement.closeAd(driver);
+      driver.switchTo().parentFrame();
       PageFactory.initElements(driver, this);
     }
   }
@@ -32,12 +34,14 @@ public class MenuBar {
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_myAccount));
     mnu_myAccount.click();
+    Advertisement.closeAd(driver);
     return new LoginPage(driver);
   }
   public ShopPage openShopMenu() {
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_shop));
     mnu_shop.click();
+    Advertisement.closeAd(driver);
     return new ShopPage(driver);
   }
 }
