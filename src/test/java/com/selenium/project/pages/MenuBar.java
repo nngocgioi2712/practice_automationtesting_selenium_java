@@ -19,15 +19,7 @@ public class MenuBar {
 
   public MenuBar(WebDriver driver) {
     this.driver = driver;
-    if (!driver.getTitle().contains("Automation Practice Site")) {
-      throw new IllegalArgumentException(
-          String.format("This is not Automation Practice Site"));
-    } else {
-      driver.switchTo().frame("aswift_9");
-      Advertisement.closeAd(driver);
-      driver.switchTo().parentFrame();
-      PageFactory.initElements(driver, this);
-    }
+    PageFactory.initElements(driver, this);
   }
 
   public LoginPage OpenMyAccountPage() {
