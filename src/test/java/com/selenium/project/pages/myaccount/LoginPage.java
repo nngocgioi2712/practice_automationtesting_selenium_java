@@ -72,10 +72,11 @@ public class LoginPage {
   }
 
   public boolean verifyPasswordMasked(){
+    System.out.println(txt_username.getAttribute("value") + txt_password.getAttribute("value") + "test");
     if(txt_password.getAttribute("type").equals("password")){
       return true;
     } else {
-      Log.error("Type of input is \"" + txt_password.getAttribute("type") + "\"");
+      Log.error("Type of password input is \"" + txt_password.getAttribute("type") + "\"");
       return false;
     }
   }

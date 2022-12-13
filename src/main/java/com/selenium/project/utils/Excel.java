@@ -5,7 +5,6 @@ import org.apache.poi.ss.usermodel.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -69,5 +68,8 @@ public class Excel {
     }
     public String getCellData (String colName, int rowNum){
         return getCellData(rowNum, columns.get(colName));
+    }
+    public int getNumberOfRows (){
+        return sh.getPhysicalNumberOfRows();
     }
 }
