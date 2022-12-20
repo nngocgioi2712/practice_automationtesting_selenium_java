@@ -19,7 +19,7 @@ public class SelectBox {
 
 
 
-    public SelectBox(WebDriver driver){
+    public SelectBox(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

@@ -19,26 +19,26 @@ public class ListenerTest implements ITestListener {
 
   }
 
-  @Override
-  public void onTestFailure(ITestResult result) {
-    Log.error(result.getName() + " failed.");
-    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
-  }
-
-  @Override
-  public void onTestSkipped(ITestResult result) {
-    Log.info(result.getName() + " skipped.");
-    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
-  }
-
-  @Override
-  public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
-
-  @Override
-  public void onTestFailedWithTimeout(ITestResult result) {
-    Log.info(result.getName() + " failed with timeout.");
-    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
-  }
+//  @Override
+//  public void onTestFailure(ITestResult result) {
+//    Log.error(result.getName() + " failed.");
+//    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
+//  }
+//
+//  @Override
+//  public void onTestSkipped(ITestResult result) {
+//    Log.info(result.getName() + " skipped.");
+//    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
+//  }
+//
+//  @Override
+//  public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
+//
+//  @Override
+//  public void onTestFailedWithTimeout(ITestResult result) {
+//    Log.info(result.getName() + " failed with timeout.");
+//    Log.info(CaptureHelper.captureScreenshot(SetupDriver.getDriver(), result.getName()));
+//  }
 
   @Override
   public void onStart(ITestContext context) {

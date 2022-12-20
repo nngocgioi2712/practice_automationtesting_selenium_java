@@ -6,6 +6,7 @@ import com.selenium.project.pages.shop.CategoriesComponent;
 import com.selenium.project.pages.shop.FilterComponent;
 import com.selenium.project.pages.shop.PostList;
 import com.selenium.project.pages.shop.SelectBox;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
