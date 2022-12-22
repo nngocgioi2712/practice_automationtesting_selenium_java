@@ -6,6 +6,7 @@ import java.util.Locale;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -44,8 +45,9 @@ public class SetupDriver {
   }
 
   @BeforeMethod
-  public void setUp() {
+  public void setUp(ITestContext context) {
     setDriver();
+    context.setAttribute("WebDriver", driver);
     //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
   }
 
