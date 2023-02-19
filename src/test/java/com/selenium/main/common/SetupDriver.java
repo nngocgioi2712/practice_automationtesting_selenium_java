@@ -3,15 +3,15 @@ package com.selenium.main.common;
 import com.selenium.main.helpers.PropertiesHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.util.Locale;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class SetupDriver {
-  protected static WebDriver driver;
+  protected WebDriver driver;
 
   public void setDriver() {
     switch (PropertiesHelper.getValue("browser").toLowerCase(Locale.ROOT)) {
@@ -29,13 +29,13 @@ public class SetupDriver {
     driver.get("http://practice.automationtesting.in/");
   }
 
-  public static WebDriver getDriver() {
+  public WebDriver getDriver() {
     return driver;
   }
 
   public WebDriver initChromeDriver() {
-    WebDriverManager.chromedriver().setup();
-    //System.setProperty("webdriver.chrome.driver", "./driver_chrome/chromedriver.exe");
+    //WebDriverManager.chromedriver().setup();
+    System.setProperty("webdriver.chrome.driver", "./driver_chrome/chromedriver.exe");
     return new ChromeDriver();
   }
 
@@ -45,8 +45,9 @@ public class SetupDriver {
   }
 
   @BeforeMethod
-  public void setUp() {
+  public void setUp(ITestContext context) {
     setDriver();
+    context.setAttribute("WebDriver", driver);
     //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
   }
 

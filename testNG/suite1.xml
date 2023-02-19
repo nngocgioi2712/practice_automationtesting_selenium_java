@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite 1">
+<suite name="Suite 1" thread-count="2" parallel="tests">
   <parameter name="username" value="nng729"></parameter>
   <parameter name="password" value="Lta@#3499"></parameter>
   <listeners>
-    <listener class-name="com.selenium.listeners.ReportListener"></listener>
+    <listener class-name="com.selenium.listeners.ListenerTest"></listener>
   </listeners>
   <test name="Login test">
     <classes>
-      <class name="com.selenium.main.testcases.myaccount.LoginTest">
-        <methods>
-          <include name="loginSuccessful"/>
-          <include name="loginWithIncorrectUsernameAndPassword"/>
-          <include name="loginWithEmptyPassword"/>
-          <include name="loginWithEmptyUsername"/>
-          <include name="loginWithEmptyUsernameAndPassword"/>
-          <include name="loginWithPasswordMasked"/>
-          <include name="loginWithUsernameChangeCase"/>
-          <include name="loginWithPasswordChangeCase"/>
-        </methods>
+      <class name="com.selenium.project.testcases.myaccount.LoginTest">
       </class>
     </classes>
   </test>
   <test name="ShopTest">
     <classes>
-      <class name="com.selenium.main.testcases.shop.ShopTest">
+      <class name="com.selenium.project.testcases.shop.ShopTest">
       </class>
     </classes>
   </test>

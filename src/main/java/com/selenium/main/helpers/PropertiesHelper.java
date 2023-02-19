@@ -20,7 +20,7 @@ public class PropertiesHelper {
     }
   }
     public static String getValue(String key) {
-    String keyVal = null;
+    String keyVal = "";
     try {
       if (fileIn == null) {
         properties = new Properties();

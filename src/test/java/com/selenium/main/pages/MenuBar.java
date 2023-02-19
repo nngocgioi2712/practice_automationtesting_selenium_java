@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MenuBar {
   private final WebDriver driver;
+//  private Advertisement ads;
   @FindBy (partialLinkText = "My Account")
   private WebElement mnu_myAccount;
   @FindBy(partialLinkText = "Shop")
@@ -20,6 +21,7 @@ public class MenuBar {
   public MenuBar(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
+//    ads = new Advertisement();
   }
 
   public LoginPage OpenMyAccountPage() {
