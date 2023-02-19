@@ -4,11 +4,11 @@
   <parameter name="username" value="nng729"></parameter>
   <parameter name="password" value="Lta@#3499"></parameter>
   <listeners>
-    <listener class-name="com.selenium.listeners.ListenerTest"></listener>
+    <listener class-name="com.selenium.listeners.ReportListener"></listener>
   </listeners>
   <test name="Login test">
     <classes>
-      <class name="com.selenium.project.testcases.myaccount.LoginTest">
+      <class name="com.selenium.main.testcases.myaccount.LoginTest">
         <methods>
           <include name="loginSuccessful"/>
           <include name="loginWithIncorrectUsernameAndPassword"/>
@@ -24,7 +24,7 @@
   </test>
   <test name="ShopTest">
     <classes>
-      <class name="com.selenium.project.testcases.shop.ShopTest">
+      <class name="com.selenium.main.testcases.shop.ShopTest">
       </class>
     </classes>
   </test>

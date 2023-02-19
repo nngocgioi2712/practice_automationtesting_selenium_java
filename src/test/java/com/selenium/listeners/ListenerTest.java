@@ -1,8 +1,8 @@
 package com.selenium.listeners;
 
-import com.selenium.project.common.SetupDriver;
-import com.selenium.project.helpers.CaptureHelper;
-import com.selenium.project.utils.Log;
+import com.selenium.main.common.SetupDriver;
+import com.selenium.main.helpers.CaptureHelper;
+import com.selenium.main.utils.Log;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
