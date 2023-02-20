@@ -4,7 +4,7 @@
   <parameter name="username" value="nng729"></parameter>
   <parameter name="password" value="Lta@#3499"></parameter>
   <listeners>
-    <listener class-name="com.selenium.listeners.ListenerTest"></listener>
+    <listener class-name="com.selenium.listeners.ReportListener"></listener>
   </listeners>
   <test name="Login test">
     <classes>
