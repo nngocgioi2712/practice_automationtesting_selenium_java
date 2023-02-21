@@ -1,4 +1,4 @@
-package com.selenium.main.common;
+package com.selenium.project.common;
 
 import com.selenium.main.helpers.PropertiesHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;

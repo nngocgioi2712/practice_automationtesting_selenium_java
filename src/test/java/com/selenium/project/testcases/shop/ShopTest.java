@@ -1,11 +1,11 @@
-package com.selenium.main.testcases.shop;
+package com.selenium.project.testcases.shop;
 
-import com.selenium.main.common.SetupDriver;
-import com.selenium.main.pages.MenuBar;
-import com.selenium.main.pages.shop.CategoriesComponent;
-import com.selenium.main.pages.shop.FilterComponent;
-import com.selenium.main.pages.shop.PostList;
-import com.selenium.main.pages.shop.SelectBox;
+import com.selenium.project.common.SetupDriver;
+import com.selenium.project.pages.MenuBar;
+import com.selenium.project.pages.shop.CategoriesComponent;
+import com.selenium.project.pages.shop.FilterComponent;
+import com.selenium.project.pages.shop.PostList;
+import com.selenium.project.pages.shop.SelectBox;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

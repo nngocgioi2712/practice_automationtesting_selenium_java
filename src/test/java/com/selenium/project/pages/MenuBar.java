@@ -1,7 +1,7 @@
-package com.selenium.main.pages;
+package com.selenium.project.pages;
 
-import com.selenium.main.pages.myaccount.LoginPage;
-import com.selenium.main.pages.shop.ShopPage;
+import com.selenium.project.pages.myaccount.LoginPage;
+import com.selenium.project.pages.shop.ShopPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

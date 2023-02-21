@@ -1,4 +1,4 @@
-package com.selenium.main.pages;
+package com.selenium.project.pages;
 
 import com.selenium.main.utils.Log;
 import org.openqa.selenium.By;

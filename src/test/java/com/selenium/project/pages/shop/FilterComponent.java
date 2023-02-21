@@ -1,4 +1,4 @@
-package com.selenium.main.pages.shop;
+package com.selenium.project.pages.shop;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

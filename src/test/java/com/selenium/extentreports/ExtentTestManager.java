@@ -3,7 +3,7 @@ package com.selenium.extentreports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.selenium.main.common.SetupDriver;
+import com.selenium.project.common.SetupDriver;
 import org.openqa.selenium.WebDriver;
 
 import java.util.HashMap;

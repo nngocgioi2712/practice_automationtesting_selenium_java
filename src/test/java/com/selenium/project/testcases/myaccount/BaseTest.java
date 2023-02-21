@@ -1,9 +1,9 @@
-package com.selenium.main.testcases.myaccount;
+package com.selenium.project.testcases.myaccount;
 
-import com.selenium.main.common.SetupDriver;
-import com.selenium.main.pages.MenuBar;
-import com.selenium.main.pages.myaccount.LoginPage;
-import com.selenium.main.pages.myaccount.RegisterPage;
+import com.selenium.project.common.SetupDriver;
+import com.selenium.project.pages.MenuBar;
+import com.selenium.project.pages.myaccount.LoginPage;
+import com.selenium.project.pages.myaccount.RegisterPage;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends SetupDriver {

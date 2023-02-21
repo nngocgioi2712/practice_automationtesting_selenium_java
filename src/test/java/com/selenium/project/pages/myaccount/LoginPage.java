@@ -1,4 +1,4 @@
-package com.selenium.main.pages.myaccount;
+package com.selenium.project.pages.myaccount;
 
 import com.selenium.main.utils.Log;
 import com.selenium.main.utils.WebUI;

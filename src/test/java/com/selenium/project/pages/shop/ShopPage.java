@@ -1,4 +1,4 @@
-package com.selenium.main.pages.shop;
+package com.selenium.project.pages.shop;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

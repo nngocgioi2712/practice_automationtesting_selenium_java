@@ -1,4 +1,4 @@
-package com.selenium.main.testcases.myaccount;
+package com.selenium.project.testcases.myaccount;
 
 import org.testng.annotations.Test;
 

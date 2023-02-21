@@ -2,7 +2,7 @@ package com.selenium.listeners;
 
 import com.aventstack.extentreports.Status;
 import com.selenium.extentreports.ExtentTestManager;
-import com.selenium.main.common.SetupDriver;
+import com.selenium.project.common.SetupDriver;
 import com.selenium.main.helpers.CaptureHelper;
 import com.selenium.main.utils.Log;
 import org.testng.ITestContext;
