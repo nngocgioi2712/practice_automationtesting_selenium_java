@@ -11,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 
 public class ExtentTestManager {
   static Map<Integer, ExtentTest> extentTestMap = new HashMap<>();
@@ -22,23 +24,31 @@ public class ExtentTestManager {
 
   public static synchronized ExtentTest saveToReport(String testName, String desc) {
     ExtentTest test = extent.createTest(testName, desc);
+    test.assignCategory("Login Test", "ShopTest");
     extentTestMap.put((int) Thread.currentThread().getId(), test);
     return test;
   }
-  // public WebDriver getDriver(){
-  //        WebDriver driver = SetupDriver.getDriver();
-  //        return driver;
-  // }
-  public static void addScreenShot(String mess, WebDriver driver){
-    String base64Image = "data:image/png;base64,"
-        + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-    getTest().log(Status.INFO, mess, MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
+
+  public static void addScreenShot(String mess, WebDriver driver) {
+    String base64Image =
+        "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+    getTest()
+        .log(
+            Status.INFO,
+            mess,
+            MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
   }
-  public static void addScreenShot(Status status, String mess, WebDriver driver){
-    String base64Image = "data:image/png;base64,"
-        + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-    getTest().log(status, mess, MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
+
+  public static void addScreenShot(Status status, String mess, WebDriver driver) {
+    String base64Image =
+        "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+    getTest()
+        .log(
+            status,
+            mess,
+            MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
   }
+
   public static void logMessage(String mess) {
     getTest().log(Status.INFO, mess);
   }
