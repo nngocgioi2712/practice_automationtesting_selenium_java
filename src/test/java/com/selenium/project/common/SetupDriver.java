@@ -34,8 +34,8 @@ public class SetupDriver {
   }
 
   public WebDriver initChromeDriver() {
-    //WebDriverManager.chromedriver().setup();
-    System.setProperty("webdriver.chrome.driver", "./driver_chrome/chromedriver.exe");
+    WebDriverManager.chromedriver().setup();
+    //System.setProperty("webdriver.chrome.driver", "./driver_chrome/chromedriver.exe");
     return new ChromeDriver();
   }
 

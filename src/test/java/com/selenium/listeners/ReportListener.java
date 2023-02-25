@@ -32,9 +32,7 @@ public class ReportListener implements ITestListener {
 
   @Override
   public void onTestSuccess(ITestResult result) {
-    driver = TestContext.getDriver(result);
     Log.info("Testcase '" + result.getName() + "' passed.");
-    ExtentTestManager.addScreenShot(Status.PASS, getTestName(result), driver);
     ExtentTestManager.logMessage(Status.PASS, getTestDescription(result));
   }
 
@@ -64,6 +62,8 @@ public class ReportListener implements ITestListener {
     driver = TestContext.getDriver(result);
     Log.info(result.getName() + " failed with timeout.");
     Log.info(CaptureHelper.captureScreenshot(driver, result.getName()));
+    ExtentTestManager.addScreenShot(Status.FAIL, getTestName(result), driver);
+    ExtentTestManager.logMessage(Status.FAIL, result.getThrowable().toString());
   }
 
   @Override
