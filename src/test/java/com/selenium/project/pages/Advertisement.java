@@ -1,6 +1,7 @@
 package com.selenium.project.pages;
 
 import com.selenium.main.utils.Log;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -9,6 +10,7 @@ public class Advertisement {
     private static By oj_btn_closed = By.id("dismiss-button");
     private static By ad_iframe = By.id("ad_iframe");
 
+    @Step("Close ads")
     public static void closeAd(WebDriver driver) {
 
         if(driver.getCurrentUrl().equals(urlAd)) {

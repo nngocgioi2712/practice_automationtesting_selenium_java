@@ -1,6 +1,7 @@
 package com.selenium.project.pages.myaccount;
 
 import com.selenium.main.utils.Log;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,12 +24,14 @@ public class RegisterPage {
     PageFactory.initElements(driver, this);
   }
 
+  @Step("Register with username: {0} and passwor: {1}")
   public void register(String username, String password) {
     txt_username.sendKeys(username);
     txt_password.sendKeys(password);
     btn_register.click();
   }
 
+  @Step("Verify login success")
   public boolean verifyLoginSuccess(String expectedText) {
     if(lbl_welcome.getText().equals(expectedText)){
       return true;

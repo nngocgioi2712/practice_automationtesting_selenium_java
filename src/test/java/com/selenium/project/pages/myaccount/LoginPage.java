@@ -2,6 +2,7 @@ package com.selenium.project.pages.myaccount;
 
 import com.selenium.main.utils.Log;
 import com.selenium.main.utils.WebUI;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +33,7 @@ public class LoginPage {
     }
   }
 
+  @Step("Login with username: {0} and password: {1}")
   public void login(String username, String password) {
     Log.info("Login with username: \"" + username + "\" and password: \"" + password + "\"");
     WebUI.setText(txt_username, username);
@@ -39,6 +41,7 @@ public class LoginPage {
     btn_login.click();
   }
 
+  @Step("Verify login success")
   public boolean verifySuccessText(String expectedText) {
     if (lbl_welcome.getText().equals(expectedText)) return true;
     else {
@@ -47,6 +50,7 @@ public class LoginPage {
     }
   }
 
+  @Step("Verify required field")
   public boolean verifyRequiredText(String expectedText) {
     if (msg_RequiredFields.getText().equals(expectedText)) return true;
     else {
@@ -55,6 +59,7 @@ public class LoginPage {
     }
   }
 
+  @Step("Verify input invalid username")
   public boolean verifyInvalidUsernameText(String expectedText) {
     if (msg_invalidFields.getText().equals(expectedText)) return true;
     else {
@@ -63,6 +68,7 @@ public class LoginPage {
     }
   }
 
+  @Step("Verify input invalid password")
   public boolean verifyInvalidPasswordText(String expectedText) {
     if (msg_invalidFields.getText().equals(expectedText)) return true;
     else {
@@ -71,6 +77,7 @@ public class LoginPage {
     }
   }
 
+  @Step("Verify password masked")
   public boolean verifyPasswordMasked(){
     System.out.println(txt_username.getAttribute("value") + txt_password.getAttribute("value") + "test");
     if(txt_password.getAttribute("type").equals("password")){

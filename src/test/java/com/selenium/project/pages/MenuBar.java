@@ -3,6 +3,7 @@ package com.selenium.project.pages;
 import com.selenium.project.pages.myaccount.LoginPage;
 import com.selenium.project.pages.shop.ShopPage;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,6 +25,7 @@ public class MenuBar {
 //    ads = new Advertisement();
   }
 
+  @Step("Open My Account Page")
   public LoginPage OpenMyAccountPage() {
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_myAccount));
@@ -31,6 +33,8 @@ public class MenuBar {
     Advertisement.closeAd(driver);
     return new LoginPage(driver);
   }
+
+  @Step("Open Shop Page")
   public ShopPage openShopMenu() {
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_shop));

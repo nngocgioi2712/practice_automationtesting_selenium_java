@@ -2,6 +2,7 @@ package com.selenium.project.testcases.myaccount;
 
 import com.selenium.main.helpers.PropertiesHelper;
 import com.selenium.main.utils.Excel;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -10,8 +11,12 @@ import org.testng.annotations.Test;
 import java.lang.reflect.Method;
 import java.util.Locale;
 
+
+@Epic("Practice Automation Test")
+@Feature("LoginTest")
 public class LoginTest extends BaseTest {
   private Excel excel = new Excel();
+
   @DataProvider(name = "loginData")
   public Object[][] getLoginData(Method m){
     if(m.getName().equalsIgnoreCase("loginWithIncorrectUsernameAndPassword")){
@@ -27,11 +32,13 @@ public class LoginTest extends BaseTest {
     }
     return  dataLoginIncorrect;
   }
-  @Test
+
+  @Test(description = "Login with valid username and password")
   @Parameters({"username", "password"})
+  @Severity(SeverityLevel.BLOCKER)
+  @Description("Login Test with valid username and password")
+  @Story("Valid username and password login test")
   public void loginSuccessful(String username, String password) {
-    /*String username = PropertiesHelper.getValue("username");
-    String password = PropertiesHelper.getValue("password");*/
     String expectedText = "Hello " + username + " (not " + username + "? Sign out)";
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifySuccessText(expectedText));
