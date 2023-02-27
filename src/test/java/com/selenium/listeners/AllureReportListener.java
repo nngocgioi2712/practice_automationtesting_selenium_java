@@ -4,8 +4,8 @@ import static com.selenium.extentreports.ExtentManager.getExtentReports;
 
 import com.aventstack.extentreports.Status;
 import com.selenium.extentreports.ExtentTestManager;
-import com.selenium.main.helpers.CaptureHelper;
-import com.selenium.main.utils.Log;
+import com.selenium.helpers.CaptureHelper;
+import com.selenium.utils.Log;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

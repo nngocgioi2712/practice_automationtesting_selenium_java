@@ -1,7 +1,7 @@
 package com.selenium.listeners;
 
-import com.selenium.main.helpers.CaptureHelper;
-import com.selenium.main.utils.Log;
+import com.selenium.helpers.CaptureHelper;
+import com.selenium.utils.Log;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;

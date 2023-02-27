@@ -4,8 +4,8 @@ import static com.selenium.extentreports.ExtentManager.getExtentReports;
 
 import com.aventstack.extentreports.Status;
 import com.selenium.extentreports.ExtentTestManager;
-import com.selenium.main.helpers.CaptureHelper;
-import com.selenium.main.utils.Log;
+import com.selenium.helpers.CaptureHelper;
+import com.selenium.utils.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
