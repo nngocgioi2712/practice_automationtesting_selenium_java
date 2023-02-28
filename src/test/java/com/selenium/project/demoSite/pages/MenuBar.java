@@ -26,8 +26,10 @@ public class MenuBar {
   }
 
   public FileUploadPage openFIleUpload() {
+    Advertisement.closeAd(driver);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_more));
     mnu_more.click();
+    Advertisement.closeAd(driver);
     mnu_fileUpload.click();
     Advertisement.closeAd(driver);
     return new FileUploadPage(driver, wait);

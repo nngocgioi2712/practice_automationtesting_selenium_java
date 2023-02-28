@@ -4,41 +4,24 @@ import com.selenium.utils.Log;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class Advertisement {
-  private static String urlAd = "https://practice.automationtesting.in/#google_vignette";
-  private static By oj_btn_closed = By.id("dismiss-button");
-  private static By ad_iframe = By.id("ad_iframe");
+  private static String urlAd = "#google_vignette";
+  private static By ins_ads = By.xpath("//ins[@class='adsbygoogle adsbygoogle-noablate' and @data-ad-status='filled']");
+  private static By btn_closeAd = By.xpath("//*[text()='Close']");
 
   @Step("Close ads")
   public static void closeAd(WebDriver driver) {
-
-    if (driver.getCurrentUrl().equals(urlAd)) {
-      if (find_ad_frame("aswift_7", driver)) {
-        Log.info("Ad was closed");
-      } else if (find_ad_frame("aswift_8", driver)) {
-        Log.info("Ad was closed");
-      } else Log.info("Close ads failed");
-
-    } else {
+    if (driver.getCurrentUrl().contains(urlAd)) {
+      WebElement e_ins = driver.findElement(ins_ads);
+      WebElement ad_frame = e_ins.findElement(By.tagName("iframe"));
+      driver.switchTo().frame(ad_frame);
+      driver.findElement(btn_closeAd).click();
+      Log.info("Ad was closed");
     }
-  }
-
-  public static boolean find_ad_frame(String iframe, WebDriver driver) {
-    driver.switchTo().frame(iframe);
-    if (driver.findElements(oj_btn_closed).size() > 0) {
-      driver.findElement(oj_btn_closed).click();
-      driver.switchTo().parentFrame();
-      return true;
-    } else if (driver.findElements(ad_iframe).size() > 0) {
-      driver.switchTo().frame("ad_iframe");
-      driver.findElement(oj_btn_closed).click();
-      driver.switchTo().parentFrame();
-      driver.switchTo().parentFrame();
-      return true;
-    } else {
-      driver.switchTo().parentFrame();
-      return false;
+    else {
     }
   }
 }
