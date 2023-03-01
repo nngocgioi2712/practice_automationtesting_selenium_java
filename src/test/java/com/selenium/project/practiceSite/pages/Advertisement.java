@@ -9,17 +9,22 @@ import org.openqa.selenium.support.FindBy;
 
 public class Advertisement {
   private static String urlAd = "#google_vignette";
-  private static By ins_ads = By.xpath("//ins[@class='adsbygoogle adsbygoogle-noablate' and @data-ad-status='filled']");
-  private static By btn_closeAd = By.xpath("//*[text()='Close']");
+  private static By ins_ads = By.xpath("//ins[@class='adsbygoogle adsbygoogle-noablate' and @aria-hidden='false']//iframe");
+  private static By btn_closeAd = By.xpath("//*[@id = 'dismiss-button']");
 
   @Step("Close ads")
   public static void closeAd(WebDriver driver) {
     if (driver.getCurrentUrl().contains(urlAd)) {
-      WebElement e_ins = driver.findElement(ins_ads);
-      WebElement ad_frame = e_ins.findElement(By.tagName("iframe"));
+      WebElement ad_frame = driver.findElement(ins_ads);
       driver.switchTo().frame(ad_frame);
+      if(driver.findElements(btn_closeAd).size() == 0){
+        driver.switchTo().frame(0);
+      } else {
+
+      }
       driver.findElement(btn_closeAd).click();
       Log.info("Ad was closed");
+      driver.switchTo().defaultContent();
     }
     else {
     }
