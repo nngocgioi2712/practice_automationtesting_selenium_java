@@ -10,8 +10,9 @@ public class ExtentManager {
   public static synchronized ExtentReports getExtentReports() {
     ExtentSparkReporter reporter = new ExtentSparkReporter("./ExtentReports/ExtentReport.html");
     reporter.config().setReportName("Practice Automation Test Selenium Extent Report");
-    //reporter.config().setDocumentTitle("DocumentTitle");
-    //reporter.viewConfigurer().viewOrder().as(new ViewName[]{ViewName.LOGIN, ViewName.SORT}).apply();
+    // reporter.config().setDocumentTitle("DocumentTitle");
+    // reporter.viewConfigurer().viewOrder().as(new ViewName[]{ViewName.LOGIN,
+    // ViewName.SORT}).apply();
     EXTENT_REPORTS.attachReporter(reporter);
     return EXTENT_REPORTS;
   }

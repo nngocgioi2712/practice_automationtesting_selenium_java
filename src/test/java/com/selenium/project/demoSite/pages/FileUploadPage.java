@@ -22,7 +22,9 @@ public class FileUploadPage {
   @FindBy(xpath = "//label[text() ='Select File']/following-sibling::div//input[@type='file']")
   private WebElement in_uploadFile;
 
-  @FindBy(xpath = "//label[text() ='Select File']/following-sibling::div/div[contains(@class, 'btn-file')]")
+  @FindBy(
+      xpath =
+          "//label[text() ='Select File']/following-sibling::div/div[contains(@class, 'btn-file')]")
   private WebElement btn_upload;
 
   @FindBy(xpath = "//div[@class='file-footer-caption']")
@@ -43,7 +45,7 @@ public class FileUploadPage {
     btn_upload.click();
     try {
       rb = new Robot();
-    } catch (AWTException e){
+    } catch (AWTException e) {
       e.printStackTrace();
     }
     StringSelection str = new StringSelection(filePath);
@@ -61,7 +63,9 @@ public class FileUploadPage {
   }
 
   public boolean verifyFileUploadSuccess(String fileName) {
-    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='file-footer-caption']")));
+    wait.until(
+        ExpectedConditions.presenceOfElementLocated(
+            By.xpath("//div[@class='file-footer-caption']")));
     return txt_fileName.getAttribute("title").equals(fileName);
   }
 }

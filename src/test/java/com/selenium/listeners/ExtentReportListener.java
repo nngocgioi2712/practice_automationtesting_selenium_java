@@ -33,6 +33,7 @@ public class ExtentReportListener implements ITestListener {
     Log.info("*************Finish Scenario************");
     getExtentReports().flush();
   }
+
   @Override
   public void onTestStart(ITestResult result) {
     Log.info("Start testcase: " + result.getName());
@@ -42,7 +43,7 @@ public class ExtentReportListener implements ITestListener {
   @Override
   public void onTestSuccess(ITestResult result) {
     ExtentTestManager.getTest().assignCategory(TestContext.getTestsName(result));
-   // TestContext.getTestsName(result);
+    // TestContext.getTestsName(result);
     System.out.println(TestContext.getTestsName(result));
     Log.info("Testcase '" + result.getName() + "' passed.");
     ExtentTestManager.logMessage(Status.PASS, getTestDescription(result));

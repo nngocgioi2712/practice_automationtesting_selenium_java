@@ -11,26 +11,26 @@ import org.testng.annotations.Test;
 import java.lang.reflect.Method;
 import java.util.Locale;
 
-
 @Epic("Practice Automation Test")
 @Feature("LoginTest")
 public class LoginTest extends BaseTest {
   private Excel excel = new Excel();
 
   @DataProvider(name = "loginData")
-  public Object[][] getLoginData(Method m){
-    if(m.getName().equalsIgnoreCase("loginWithIncorrectUsernameAndPassword")){
+  public Object[][] getLoginData(Method m) {
+    if (m.getName().equalsIgnoreCase("loginWithIncorrectUsernameAndPassword")) {
       excel.setExcelFile("./DataTest/login.xlsx", "IncorrectUsername");
-    } else if(m.getName().equalsIgnoreCase("loginWithEmptyPassword")){
+    } else if (m.getName().equalsIgnoreCase("loginWithEmptyPassword")) {
       excel.setExcelFile("./DataTest/login.xlsx", "EmptyPassword");
-    } else {}
-      int rowNum = excel.getNumberOfRows() - 1;
+    } else {
+    }
+    int rowNum = excel.getNumberOfRows() - 1;
     Object[][] dataLoginIncorrect = new Object[rowNum][2];
-    for(int i = 0; i < rowNum; i++) {
+    for (int i = 0; i < rowNum; i++) {
       dataLoginIncorrect[i][0] = excel.getCellData("username", i + 1);
       dataLoginIncorrect[i][1] = excel.getCellData("password", i + 1);
     }
-    return  dataLoginIncorrect;
+    return dataLoginIncorrect;
   }
 
   @Test(description = "Login with valid username and password")
@@ -47,11 +47,11 @@ public class LoginTest extends BaseTest {
   @Test(dataProvider = "loginData")
   public void loginWithIncorrectUsernameAndPassword(String username, String password) {
     String expectedText =
-              "Error: the username "
-                      + username
-                      + " is not registered on this site. If you are unsure of your username, try your email address instead.";
-      loginPage.login(username, password);
-      Assert.assertTrue(loginPage.verifyInvalidUsernameText(expectedText));
+        "Error: the username "
+            + username
+            + " is not registered on this site. If you are unsure of your username, try your email address instead.";
+    loginPage.login(username, password);
+    Assert.assertTrue(loginPage.verifyInvalidUsernameText(expectedText));
   }
 
   @Test(dataProvider = "loginData")
@@ -78,6 +78,7 @@ public class LoginTest extends BaseTest {
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifyRequiredText(expectedText));
   }
+
   @Test
   public void loginWithPasswordMasked() {
     String username = "username";
@@ -85,19 +86,25 @@ public class LoginTest extends BaseTest {
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifyPasswordMasked());
   }
+
   @Test
   public void loginWithUsernameChangeCase() {
     String username = PropertiesHelper.getValue("username").toUpperCase(Locale.ROOT);
     String password = PropertiesHelper.getValue("password");
-    String expectedText = "Hello " + username.toLowerCase() + " (not " + username.toLowerCase() + "? Sign out)";
+    String expectedText =
+        "Hello " + username.toLowerCase() + " (not " + username.toLowerCase() + "? Sign out)";
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifySuccessText(expectedText));
   }
+
   @Test
   public void loginWithPasswordChangeCase() {
     String username = PropertiesHelper.getValue("username");
     String password = PropertiesHelper.getValue("password").toUpperCase(Locale.ROOT);
-    String expectedText = "Error: the password you entered for the username " + username + " is incorrect. Lost your password?";
+    String expectedText =
+        "Error: the password you entered for the username "
+            + username
+            + " is incorrect. Lost your password?";
     loginPage.login(username, password);
     Assert.assertTrue(loginPage.verifyInvalidPasswordText(expectedText));
   }

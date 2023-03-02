@@ -10,12 +10,16 @@ import org.openqa.selenium.support.PageFactory;
 public class RegisterPage {
 
   private WebDriver driver;
-  @FindBy (css = "#reg_username")
+
+  @FindBy(css = "#reg_username")
   private WebElement txt_username;
+
   @FindBy(css = "#reg_password")
   private WebElement txt_password;
+
   @FindBy(xpath = "//input[@name = \"register\"")
   private WebElement btn_register;
+
   @FindBy(xpath = "//div[@class = 'page-content entry-content']//p")
   private WebElement lbl_welcome;
 
@@ -33,10 +37,15 @@ public class RegisterPage {
 
   @Step("Verify login success")
   public boolean verifyLoginSuccess(String expectedText) {
-    if(lbl_welcome.getText().equals(expectedText)){
+    if (lbl_welcome.getText().equals(expectedText)) {
       return true;
     } else {
-      Log.info("ActualText is \"" + lbl_welcome.getText() + "\" and ExpectedText is \"" + expectedText + "\"");
+      Log.info(
+          "ActualText is \""
+              + lbl_welcome.getText()
+              + "\" and ExpectedText is \""
+              + expectedText
+              + "\"");
       return false;
     }
   }

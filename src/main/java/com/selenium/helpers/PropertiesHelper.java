@@ -7,7 +7,8 @@ import java.util.Properties;
 public class PropertiesHelper {
   private static Properties properties;
   private static FileInputStream fileIn;
-  private static String configsPropertiesFilePath = System.getProperty("user.dir") + "/src/main/resources/configs.properties";
+  private static String configsPropertiesFilePath =
+      System.getProperty("user.dir") + "/src/main/resources/configs.properties";
 
   public static Properties loadFile() {
     try {
@@ -19,7 +20,8 @@ public class PropertiesHelper {
       return new Properties();
     }
   }
-    public static String getValue(String key) {
+
+  public static String getValue(String key) {
     String keyVal = "";
     try {
       if (fileIn == null) {

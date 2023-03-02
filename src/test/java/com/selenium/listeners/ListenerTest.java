@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 public class ListenerTest implements ITestListener {
 
   private WebDriver driver;
+
   @Override
   public void onTestStart(ITestResult result) {
     Log.info("Start testcase: " + result.getName());
@@ -20,7 +21,7 @@ public class ListenerTest implements ITestListener {
     ITestContext context = result.getTestContext();
     driver = (WebDriver) context.getAttribute("WebDriver");
     Log.info("Testcase '" + result.getName() + "' passed.");
-    Log.info(CaptureHelper.captureScreenshot(driver , result.getName()));
+    Log.info(CaptureHelper.captureScreenshot(driver, result.getName()));
   }
 
   @Override
@@ -28,7 +29,7 @@ public class ListenerTest implements ITestListener {
     ITestContext context = result.getTestContext();
     driver = (WebDriver) context.getAttribute("WebDriver");
     Log.error(result.getName() + " failed.");
-    Log.info(CaptureHelper.captureScreenshot(driver , result.getName()));
+    Log.info(CaptureHelper.captureScreenshot(driver, result.getName()));
   }
 
   @Override
@@ -52,11 +53,11 @@ public class ListenerTest implements ITestListener {
 
   @Override
   public void onStart(ITestContext context) {
-      Log.debug("***********Start Scenario**************");
+    Log.debug("***********Start Scenario**************");
   }
 
   @Override
   public void onFinish(ITestContext context) {
-      Log.info("*************Finish Scenario************");
+    Log.info("*************Finish Scenario************");
   }
 }

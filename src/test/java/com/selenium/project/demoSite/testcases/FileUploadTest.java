@@ -36,7 +36,7 @@ public class FileUploadTest extends SetupDriver {
   public void uploadFileSuccessUseRobot() {
     try {
       fileUploadPage.uploadFileUseRobotClass(filePath);
-    } catch (InterruptedException e){
+    } catch (InterruptedException e) {
       Log.error(e.getMessage());
     }
 

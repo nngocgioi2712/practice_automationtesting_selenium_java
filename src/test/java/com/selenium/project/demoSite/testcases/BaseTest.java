@@ -7,8 +7,8 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends SetupDriver {
 
-    @BeforeMethod
-    public void openWebDemo() {
-        driver.get(PropertiesHelper.getValue("DEMO_URL"));
-    }
+  @BeforeMethod
+  public void openWebDemo() {
+    driver.get(PropertiesHelper.getValue("DEMO_URL"));
+  }
 }

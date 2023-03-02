@@ -9,16 +9,34 @@ import org.testng.annotations.Test;
 
 public class WindowsHandleTest extends BaseTest {
 
-    private MenuBar menuBar;
-    private WindowsHandlePage windowsHandlePage;
+  private MenuBar menuBar;
+  private WindowsHandlePage windowsHandlePage;
 
-    @BeforeMethod
-    public void openWindowsPage(){
-        menuBar = new MenuBar(driver, wait);
-        windowsHandlePage = menuBar.openWindowsPage();
-    }
-    @Test
-    public void openNewWindowTabTest(){
-        windowsHandlePage.openNewWindowTab();
-    }
+  @BeforeMethod
+  public void openWindowsPage() {
+    menuBar = new MenuBar(driver, wait);
+    windowsHandlePage = menuBar.openWindowsPage();
+  }
+
+  @Test
+  public void openNewWindowTabTest() {
+    String mainWindow = windowsHandlePage.getCurrentWindow();
+    windowsHandlePage.openNewWindowTab();
+    windowsHandlePage.closeNewWindowAndSwitchWindow();
+    windowsHandlePage.verifyIsMainWindow(mainWindow);
+  }
+  @Test
+  public void openNewWindowSeperateTest() {
+    String mainWindow = windowsHandlePage.getCurrentWindow();
+    windowsHandlePage.openNewSeperateWindow();
+    windowsHandlePage.closeNewWindowAndSwitchWindow();
+    windowsHandlePage.verifyIsMainWindow(mainWindow);
+  }
+  @Test
+  public void openNewSeperateTest() {
+    String mainWindow = windowsHandlePage.getCurrentWindow();
+    windowsHandlePage.openSeperateWindow();
+    windowsHandlePage.closeNewWindowAndSwitchWindow();
+    windowsHandlePage.verifyIsMainWindow(mainWindow);
+  }
 }

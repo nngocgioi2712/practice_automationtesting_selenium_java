@@ -12,6 +12,7 @@ public class TestContext {
     driver = (WebDriver) context.getAttribute("WebDriver");
     return driver;
   }
+
   public static String getTestsName(ITestResult result) {
     ITestContext context = result.getTestContext();
     return context.getCurrentXmlTest().getName();

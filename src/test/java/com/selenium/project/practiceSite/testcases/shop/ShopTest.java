@@ -19,10 +19,11 @@ public class ShopTest extends SetupDriver {
   private PostList postList;
 
   @BeforeMethod
-  public void beforeShopTest(){
+  public void beforeShopTest() {
     driver.get(PropertiesHelper.getValue("PRACTICE_URL"));
     menuBar = new MenuBar(driver);
   }
+
   @Test
   public void filterByPrice() {
     int minPrice = 150;
@@ -48,17 +49,11 @@ public class ShopTest extends SetupDriver {
     Assert.assertTrue(postList.verifyNameOfProduct(expectedResultText));
   }
 
+  public void sortByPopularity() {}
 
-  public void sortByPopularity() {
-  }
+  public void sortByAverageRatings() {}
 
-
-  public void sortByAverageRatings() {
-  }
-
-
-  public void sortByNewnessRatings() {
-  }
+  public void sortByNewnessRatings() {}
 
   @Test
   public void sortByLowToHigh() {

@@ -11,8 +11,9 @@ public class BaseTest extends SetupDriver {
   private MenuBar menuBar;
   protected LoginPage loginPage;
   protected RegisterPage registerPage;
+
   @BeforeMethod
-  public void beforeBaseTest(){
+  public void beforeBaseTest() {
     driver.get(PropertiesHelper.getValue("PRACTICE_URL"));
     menuBar = new MenuBar(driver);
     registerPage = new RegisterPage(driver);

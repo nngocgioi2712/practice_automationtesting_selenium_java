@@ -14,6 +14,7 @@ public class MenuBar {
   private WebDriver driver;
   private WebDriverWait wait;
   private WebUI webUI;
+
   @FindBy(xpath = "//a[text()='More']")
   private WebElement mnu_more;
 
@@ -22,6 +23,7 @@ public class MenuBar {
 
   @FindBy(xpath = "//a[text()='SwitchTo']")
   private WebElement mnu_switchTo;
+
   @FindBy(xpath = "//a[text()='Windows']")
   private WebElement mnu_windows;
 
@@ -43,7 +45,7 @@ public class MenuBar {
     return new FileUploadPage(driver, wait);
   }
 
-  public WindowsHandlePage openWindowsPage(){
+  public WindowsHandlePage openWindowsPage() {
     Advertisement.closeAd(driver);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_switchTo));
     mnu_switchTo.click();

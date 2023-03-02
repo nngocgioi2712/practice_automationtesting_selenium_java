@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeMethod;
 public class SetupDriver {
   protected WebDriver driver;
   protected WebDriverWait wait;
+
   @BeforeMethod
   public void setUp(ITestContext context) {
     setDriver();
@@ -36,7 +37,8 @@ public class SetupDriver {
         driver = initFireFoxDriver();
         break;
       default:
-        System.out.println("Browser " + PropertiesHelper.getValue("browser") + "is invalid. Launching Chrome ...");
+        System.out.println(
+            "Browser " + PropertiesHelper.getValue("browser") + "is invalid. Launching Chrome ...");
         driver = initChromeDriver();
     }
     driver.manage().window().maximize();
@@ -47,7 +49,7 @@ public class SetupDriver {
   }
 
   public WebDriver initChromeDriver() {
-    //WebDriverManager.chromedriver().setup();
+    // WebDriverManager.chromedriver().setup();
     System.setProperty("webdriver.chrome.driver", "./driver_chrome/chromedriver.exe");
     return new ChromeDriver();
   }
@@ -56,6 +58,4 @@ public class SetupDriver {
     WebDriverManager.firefoxdriver().setup();
     return new FirefoxDriver();
   }
-
-
 }

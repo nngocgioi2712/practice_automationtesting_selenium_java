@@ -13,12 +13,9 @@ public class ShopPage {
   public ShopPage(WebDriver _driver) {
     driver = _driver;
     if (!driver.getTitle().contains("Products")) {
-      throw new IllegalArgumentException(
-          String.format("Page is not Products"));
-    }else {
+      throw new IllegalArgumentException(String.format("Page is not Products"));
+    } else {
       PageFactory.initElements(driver, this);
     }
   }
-
-
 }
