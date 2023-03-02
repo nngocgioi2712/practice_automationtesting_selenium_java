@@ -13,7 +13,7 @@ public class FileUploadTest extends SetupDriver {
 
   private MenuBar menuBar;
   private FileUploadPage fileUploadPage;
-  String filePath = System.getProperty("userDir") + "/DataTest/login.xlsx";
+  String filePath = System.getProperty("user.dir") + "/DataTest/login.xlsx";
 
   @BeforeMethod
   public void openFileUploadPage() {

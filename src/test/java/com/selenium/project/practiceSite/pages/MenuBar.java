@@ -25,10 +25,16 @@ public class MenuBar {
   }
 
   @Step("Open My Account Page")
-  public LoginPage OpenMyAccountPage() {
+  public LoginPage OpenMyAccountPage(){
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_myAccount));
     mnu_myAccount.click();
+    try {
+      Thread.sleep(3000);
+    } catch (Exception e){
+      System.out.println(e.getMessage());
+    }
+
     Advertisement.closeAd(driver);
     return new LoginPage(driver);
   }
@@ -38,6 +44,11 @@ public class MenuBar {
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_shop));
     mnu_shop.click();
+    try {
+      Thread.sleep(3000);
+    } catch (Exception e){
+      System.out.println(e.getMessage());
+    }
     Advertisement.closeAd(driver);
     return new ShopPage(driver);
   }

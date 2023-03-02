@@ -31,7 +31,7 @@ public class FileUploadPage {
   }
 
   public void uploadFileUseSendKey() {
-    in_uploadFile.sendKeys(System.getProperty("userDir") + urlFile);
+    in_uploadFile.sendKeys(System.getProperty("user.dir") + urlFile);
   }
 
   public void uploadFileUseRobotClass(String filePath) {
@@ -56,6 +56,7 @@ public class FileUploadPage {
   }
 
   public boolean verifyFileUploadSuccess() {
+   // wait.until(ExpectedConditions.vis(txt_fileName));
     return txt_fileName.getAttribute("title").equals("login.xlsx");
   }
 }

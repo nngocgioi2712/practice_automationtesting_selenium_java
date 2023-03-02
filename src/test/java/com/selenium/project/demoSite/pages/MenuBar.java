@@ -1,6 +1,7 @@
 package com.selenium.project.demoSite.pages;
 
 import com.selenium.project.practiceSite.pages.Advertisement;
+import com.selenium.utils.WebUI;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,7 @@ public class MenuBar {
 
   private WebDriver driver;
   private WebDriverWait wait;
-
+  private WebUI webUI;
   @FindBy(xpath = "//a[text()='More']")
   private WebElement mnu_more;
 
@@ -26,6 +27,8 @@ public class MenuBar {
   }
 
   public FileUploadPage openFIleUpload() {
+    webUI = new WebUI(driver);
+    webUI.waitForPageLoaded();
     Advertisement.closeAd(driver);
     wait.until(ExpectedConditions.elementToBeClickable(mnu_more));
     mnu_more.click();
