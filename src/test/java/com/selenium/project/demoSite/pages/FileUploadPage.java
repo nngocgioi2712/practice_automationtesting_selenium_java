@@ -5,6 +5,8 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,10 +18,12 @@ public class FileUploadPage {
   private WebDriver driver;
   private WebDriverWait wait;
   private Robot rb;
-  String urlFile = "/DataTest/login.xlsx";
 
   @FindBy(xpath = "//label[text() ='Select File']/following-sibling::div//input[@type='file']")
   private WebElement in_uploadFile;
+
+  @FindBy(xpath = "//label[text() ='Select File']/following-sibling::div/div[contains(@class, 'btn-file')]")
+  private WebElement btn_upload;
 
   @FindBy(xpath = "//div[@class='file-footer-caption']")
   private WebElement txt_fileName;
@@ -30,13 +34,13 @@ public class FileUploadPage {
     PageFactory.initElements(driver, this);
   }
 
-  public void uploadFileUseSendKey() {
-    in_uploadFile.sendKeys(System.getProperty("user.dir") + urlFile);
+  public void uploadFileUseSendKey(String filePath) {
+    in_uploadFile.sendKeys(filePath);
   }
 
-  public void uploadFileUseRobotClass(String filePath) {
-    wait.until(ExpectedConditions.elementToBeClickable(in_uploadFile));
-    in_uploadFile.click();
+  public void uploadFileUseRobotClass(String filePath) throws InterruptedException {
+    wait.until(ExpectedConditions.elementToBeClickable(btn_upload));
+    btn_upload.click();
     try {
       rb = new Robot();
     } catch (AWTException e){
@@ -45,6 +49,7 @@ public class FileUploadPage {
     StringSelection str = new StringSelection(filePath);
     Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 
+    Thread.sleep(1000);
     rb.keyPress(KeyEvent.VK_CONTROL);
     rb.keyPress(KeyEvent.VK_V);
 
@@ -55,8 +60,8 @@ public class FileUploadPage {
     rb.keyRelease(KeyEvent.VK_ENTER);
   }
 
-  public boolean verifyFileUploadSuccess() {
-   // wait.until(ExpectedConditions.vis(txt_fileName));
-    return txt_fileName.getAttribute("title").equals("login.xlsx");
+  public boolean verifyFileUploadSuccess(String fileName) {
+    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='file-footer-caption']")));
+    return txt_fileName.getAttribute("title").equals(fileName);
   }
 }

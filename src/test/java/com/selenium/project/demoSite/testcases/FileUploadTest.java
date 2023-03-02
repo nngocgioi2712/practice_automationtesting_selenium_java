@@ -4,6 +4,7 @@ import com.selenium.common.SetupDriver;
 import com.selenium.helpers.PropertiesHelper;
 import com.selenium.project.demoSite.pages.FileUploadPage;
 import com.selenium.project.demoSite.pages.MenuBar;
+import com.selenium.utils.Log;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -13,7 +14,8 @@ public class FileUploadTest extends SetupDriver {
 
   private MenuBar menuBar;
   private FileUploadPage fileUploadPage;
-  String filePath = System.getProperty("user.dir") + "/DataTest/login.xlsx";
+  String filePath = System.getProperty("user.dir") + "\\DataTest\\login.xlsx";
+  String fileName = "login.xlsx";
 
   @BeforeMethod
   public void openFileUploadPage() {
@@ -26,13 +28,18 @@ public class FileUploadTest extends SetupDriver {
 
   @Test
   public void uploadFileSuccess() {
-    fileUploadPage.uploadFileUseSendKey();
-    Assert.assertTrue(fileUploadPage.verifyFileUploadSuccess());
+    fileUploadPage.uploadFileUseSendKey(filePath);
+    Assert.assertTrue(fileUploadPage.verifyFileUploadSuccess(fileName));
   }
 
   @Test
   public void uploadFileSuccessUseRobot() {
-    fileUploadPage.uploadFileUseRobotClass(filePath);
-    Assert.assertTrue(fileUploadPage.verifyFileUploadSuccess());
+    try {
+      fileUploadPage.uploadFileUseRobotClass(filePath);
+    } catch (InterruptedException e){
+      Log.error(e.getMessage());
+    }
+
+    Assert.assertTrue(fileUploadPage.verifyFileUploadSuccess(fileName));
   }
 }
