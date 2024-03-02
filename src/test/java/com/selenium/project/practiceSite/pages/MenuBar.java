@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class MenuBar {
   private final WebDriver driver;
 
@@ -27,7 +29,7 @@ public class MenuBar {
 
   @Step("Open My Account Page")
   public LoginPage OpenMyAccountPage() {
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     wait.until(ExpectedConditions.elementToBeClickable(mnu_myAccount));
     mnu_myAccount.click();
     try {
@@ -42,7 +44,7 @@ public class MenuBar {
 
   @Step("Open Shop Page")
   public ShopPage openShopMenu() {
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     wait.until(ExpectedConditions.elementToBeClickable(mnu_shop));
     mnu_shop.click();
     try {

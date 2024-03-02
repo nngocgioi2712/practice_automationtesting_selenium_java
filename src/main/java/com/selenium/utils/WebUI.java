@@ -6,13 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class WebUI {
   private WebDriver driver;
   private static WebDriverWait wait;
 
   public WebUI(WebDriver driver) {
     this.driver = driver;
-    wait = new WebDriverWait(driver, 10);
+    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   }
 
   public static void setText(WebElement element, String value) {
@@ -57,7 +59,7 @@ public class WebUI {
         };
 
     try {
-      wait = new WebDriverWait(driver, 30);
+      wait = new WebDriverWait(driver, Duration.ofSeconds(30));
       if (wait.until(jQueryLoad)) {
         System.out.println("JqueryLoaded");
       } else {

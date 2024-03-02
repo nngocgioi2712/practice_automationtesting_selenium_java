@@ -40,8 +40,7 @@ public class ListenerTest implements ITestListener {
     Log.info(CaptureHelper.captureScreenshot(driver, result.getName()));
   }
 
-  @Override
-  public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
+
 
   @Override
   public void onTestFailedWithTimeout(ITestResult result) {

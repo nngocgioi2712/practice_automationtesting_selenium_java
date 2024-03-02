@@ -1,10 +1,8 @@
 package com.selenium.project.demoSite.testcases;
 
-import com.selenium.common.SetupDriver;
 import com.selenium.project.demoSite.pages.MenuBar;
-import com.selenium.project.demoSite.pages.WindowsHandlePage;
+import com.selenium.project.demoSite.pages.switchto.WindowsHandlePage;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class WindowsHandleTest extends BaseTest {
@@ -28,14 +26,14 @@ public class WindowsHandleTest extends BaseTest {
   @Test
   public void openNewWindowSeperateTest() {
     String mainWindow = windowsHandlePage.getCurrentWindow();
-    windowsHandlePage.openNewSeperateWindow();
+    windowsHandlePage.openNewSeparateWindow();
     windowsHandlePage.closeNewWindowAndSwitchWindow();
     windowsHandlePage.verifyIsMainWindow(mainWindow);
   }
   @Test
   public void openNewSeperateTest() {
     String mainWindow = windowsHandlePage.getCurrentWindow();
-    windowsHandlePage.openSeperateWindow();
+    windowsHandlePage.openSeparateWindow();
     windowsHandlePage.closeNewWindowAndSwitchWindow();
     windowsHandlePage.verifyIsMainWindow(mainWindow);
   }

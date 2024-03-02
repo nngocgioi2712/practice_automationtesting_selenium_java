@@ -1,5 +1,6 @@
 package com.selenium.project.demoSite.pages;
 
+import com.selenium.project.demoSite.pages.switchto.WindowsHandlePage;
 import com.selenium.project.practiceSite.pages.Advertisement;
 import com.selenium.utils.WebUI;
 import org.openqa.selenium.WebDriver;

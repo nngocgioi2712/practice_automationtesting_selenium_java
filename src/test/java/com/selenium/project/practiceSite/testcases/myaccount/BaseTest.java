@@ -7,7 +7,7 @@ import com.selenium.project.practiceSite.pages.myaccount.LoginPage;
 import com.selenium.project.practiceSite.pages.myaccount.RegisterPage;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseTest extends SetupDriver {
+public abstract class BaseTest extends SetupDriver {
   private MenuBar menuBar;
   protected LoginPage loginPage;
   protected RegisterPage registerPage;

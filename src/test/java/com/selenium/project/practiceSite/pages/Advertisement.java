@@ -20,13 +20,10 @@ public class Advertisement {
       driver.switchTo().frame(ad_frame);
       if (driver.findElements(btn_closeAd).size() == 0) {
         driver.switchTo().frame(0);
-      } else {
-
       }
       driver.findElement(btn_closeAd).click();
       Log.info("Ad was closed");
       driver.switchTo().defaultContent();
-    } else {
     }
   }
 }
