@@ -4,8 +4,8 @@ import static com.selenium.extentreports.ExtentManager.getExtentReports;
 
 import com.aventstack.extentreports.Status;
 import com.selenium.extentreports.ExtentTestManager;
-import com.selenium.main.helpers.CaptureHelper;
-import com.selenium.main.utils.Log;
+import com.selenium.helpers.CaptureHelper;
+import com.selenium.utils.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -33,6 +33,7 @@ public class ExtentReportListener implements ITestListener {
     Log.info("*************Finish Scenario************");
     getExtentReports().flush();
   }
+
   @Override
   public void onTestStart(ITestResult result) {
     Log.info("Start testcase: " + result.getName());
@@ -42,7 +43,7 @@ public class ExtentReportListener implements ITestListener {
   @Override
   public void onTestSuccess(ITestResult result) {
     ExtentTestManager.getTest().assignCategory(TestContext.getTestsName(result));
-   // TestContext.getTestsName(result);
+    // TestContext.getTestsName(result);
     System.out.println(TestContext.getTestsName(result));
     Log.info("Testcase '" + result.getName() + "' passed.");
     ExtentTestManager.logMessage(Status.PASS, getTestDescription(result));

@@ -1,7 +1,7 @@
 package com.selenium.listeners;
 
-import com.selenium.main.helpers.CaptureHelper;
-import com.selenium.main.utils.Log;
+import com.selenium.helpers.CaptureHelper;
+import com.selenium.utils.Log;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 public class ListenerTest implements ITestListener {
 
   private WebDriver driver;
+
   @Override
   public void onTestStart(ITestResult result) {
     Log.info("Start testcase: " + result.getName());
@@ -20,7 +21,7 @@ public class ListenerTest implements ITestListener {
     ITestContext context = result.getTestContext();
     driver = (WebDriver) context.getAttribute("WebDriver");
     Log.info("Testcase '" + result.getName() + "' passed.");
-    Log.info(CaptureHelper.captureScreenshot(driver , result.getName()));
+    Log.info(CaptureHelper.captureScreenshot(driver, result.getName()));
   }
 
   @Override
@@ -28,7 +29,7 @@ public class ListenerTest implements ITestListener {
     ITestContext context = result.getTestContext();
     driver = (WebDriver) context.getAttribute("WebDriver");
     Log.error(result.getName() + " failed.");
-    Log.info(CaptureHelper.captureScreenshot(driver , result.getName()));
+    Log.info(CaptureHelper.captureScreenshot(driver, result.getName()));
   }
 
   @Override
@@ -39,8 +40,7 @@ public class ListenerTest implements ITestListener {
     Log.info(CaptureHelper.captureScreenshot(driver, result.getName()));
   }
 
-  @Override
-  public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
+
 
   @Override
   public void onTestFailedWithTimeout(ITestResult result) {
@@ -52,11 +52,11 @@ public class ListenerTest implements ITestListener {
 
   @Override
   public void onStart(ITestContext context) {
-      Log.debug("***********Start Scenario**************");
+    Log.debug("***********Start Scenario**************");
   }
 
   @Override
   public void onFinish(ITestContext context) {
-      Log.info("*************Finish Scenario************");
+    Log.info("*************Finish Scenario************");
   }
 }
